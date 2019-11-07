@@ -1,4 +1,67 @@
-.fancy-header {
-    color: purple;
+h1 {
+    text-align: center;
+    font-family: 'ZCOOL XiaoWei', serif;
+    color: cornflowerblue;
+    font-size: 3em;
+}
+h2 {
+    color: cornflowerblue;
     text-decoration: underline;
+    font-family: 'Inconsolata', monospace;
+    padding-left: 30px;
+    font-size: 2em;
+}
+head, body {
+    background-color: honeydew;
+    background-image: url("https://images.pexels.com/photos/1274260/pexels-photo-1274260.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    text-align: center;
+}
+.opening {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: large;
+    padding-left: 40px;
+}
+p, ul, ol, table {
+    color: white;
+}
+.ten-px {
+    padding-right: 10px;
+}
+.twtypx {
+    padding-right: 20px;
+   }
+.sxtypx {
+    padding-right: 60px;
+}
+ul, ol {
+    font-size: 20px;
+    font-family: 'Play', sans-serif;
+    display: inline-block; text-align: center;
+}
+ul {
+    list-style: square;
+}
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 90px;
+}
+td {
+    padding-right: 30px;
+    text-align: left;
+}
+th {
+    font-size: large;
+    text-align: left;
+    text-decoration: underline;
+}
+a:hover {
+    color: white;
+}
+tr:hover {
+    color: blue;
+    text-decoration: underline; color: blue;
+}
+.close {
+    padding-left: 60px;
 }
