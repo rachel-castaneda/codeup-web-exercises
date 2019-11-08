@@ -17,6 +17,9 @@ h2 {
     background-image: url("../img/space-sky.jpeg");
     text-align: center;
 }
+strong {
+    font-weight: bolder;
+}
 .opening {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 2em;
