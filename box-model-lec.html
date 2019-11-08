@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///Users/rachelcastaneda/Downloads/box-model-lec.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Box Model</title>
+
+	<style>
+		/*
+			BOX MODEL - a way to space elements from each other
+
+			Overall element size with box-sizing: content-box...
+				height = height + padding-top + padding-bottom + border-top + border-bottom
+				width = width + padding-left + padding-right + border-left + border-right
+
+			Specifying 1 value, 2 values, 3 values, 4 values (padding, margin, border)
+			1 = all sides
+			2 = y-axis x-axis
+			3 = top x-axis bottom
+			4 = top right bottom left
+
+			Overall element size with box-sizing: border-box...
+				height = height
+				width = width
+
+			>>> For more info on box-sizing: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+		*/
+
+		.box {
+			width: 200px;
+			height: 200px;
+			padding: 5px;
+			border: solid black 2px;
+		}
+        .first-box {
+            background-color: cornflowerblue;
+            margin-bottom: 10px;
+        }
+        .second-box {
+            background-color: antiquewhite;
+            box-sizing: border-box;
+        }
+
+        div {
+            border: 1px  solid black;
+        }
+        p {
+            border: 1px solid orange;
+        }
+        span {
+            border: 1px solid purple;
+        }
+	</style>
+</head>
+<body>
+
+	<h1>Box Model Lecture!</h1>
+
+	<hr>
+	<h4>Here are some boxes...</h4>
+	<!--	TODO TOGETHER: EXPLORE BOXES. -->
+
+
+    <div class="box first-box">
+	    <h1>First Box Content</h1>
+	    <p>The total width of this box is: 214px</p>
+    </div>
+
+    <div class="box second-box">
+    <h1>Second Box Content</h1>
+    <p>The total width of this box is: 200px</p>
+    </div>
+
+
+
+    <hr>
+	<h4>Divs &amp; Spans</h4>
+
+	<div>
+		<p>This text is inside of a paragraph tag inside of a div. &lt; p &gt; &amp;&amp; &lt; div &gt; are block level elements </p>
+	</div>
+
+	<p><span>This text is inside of a span inside of a paragraph tag</span></p>
+
+
+</body></html>
