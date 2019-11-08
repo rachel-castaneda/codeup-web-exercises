@@ -13,12 +13,12 @@ h2 {
 }
 head, body {
     background-color: honeydew;
-    background-image: url("https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-image: url("https://images.pexels.com/photos/1487009/pexels-photo-1487009.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
     text-align: center;
 }
 .opening {
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: large;
+    font-size: 2em;
     padding-left: 40px;
 }
 p, ul, ol, table {
