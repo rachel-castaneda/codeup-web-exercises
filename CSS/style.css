@@ -10,10 +10,11 @@ h2 {
     font-family: 'Arvo', serif;
     padding-left: 30px;
     font-size: 2em;
+    background-color: black;
 }
-head, body {
+#body {
     background-color: honeydew;
-    background-image: url("https://images.pexels.com/photos/1487009/pexels-photo-1487009.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-image: url("../img/space-sky.jpeg");
     text-align: center;
 }
 .opening {
@@ -47,13 +48,18 @@ table.center {
     padding-left: 90px;
 }
 td {
-    padding-right: 30px;
+    padding-right: 40px;
     text-align: left;
+    font-family: 'Play', sans-serif;
+    font-size: 1em;
+    font-weight: bolder;
 }
 th {
-    font-size: large;
+    font-size: 2em;
     text-align: left;
     text-decoration: underline;
+    font-family: 'Play', sans-serif;
+    padding-right: 40px;
 }
 a:hover {
     color: white;
