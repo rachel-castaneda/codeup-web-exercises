@@ -1,44 +1,61 @@
 
-* {
-    box-sizing: border-box;
-}
+/** {*/
+/*    box-sizing: border-box;*/
+/*}*/
 body {
     margin: 0;
-
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
 }
 nav {
     background: #C1C1C1;
     /*display: flex;*/
-    /*margin: auto;*/
+    height: 4.25em;
 }
 
-ul {
-    list-style: none;
+nav ul {
+    list-style: none; /*gets rid of bullet points*/
     padding: 0;
     margin: 0;
+    height: inherit; /*avoids explicit height*/
+    align-items: center; /*puts list items in center  of bar*/
     display: flex; /* made unordered list a flex container */
 }
 nav a {
     text-decoration: none;
     color: black;
-    font-family: "Work Sans";
     display: inline-block; /* inline-block to increase clickable area beyond the text */
     padding: 1em; /* increases clickable area of anchor tags on all sides by 1em */
 }
 nav a:hover {
-    background: blue;
+    color: blue;
 }
 
-nav ul li:nth-child(6) {
+nav li {
+    margin: .5em;
+}
+
+li:nth-child(6) {
+    margin-left: auto;
+}
+
+.logo-item {
     display: flex;
-
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    height: inherit;
+    width: 100%;
 }
 
-.logo-div {
-    display: inline-block;
-    margin: 0 auto;
-    font-size: 3em;
-    padding: .2em;
-    font-family: 'Montserrat', sans-serif;
+.logo {
+    margin: auto;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+li:not(.logo-item) {
+    z-index: 1;  /*allows to bring elements forwards and backwards*/
 }
 
