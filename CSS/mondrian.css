@@ -1,59 +1,58 @@
 * {
     box-sizing: border-box;
 }
-body {
-    margin: 0;
-    text-align: center;
-}
-main {
-    background: lightblue;
-    margin-top: 2em;
-    /*display: grid;*/
-    grid-gap: 20px;
-}
-main div {
-    font-size: 2em;
-    color: white;
-    background: grey;
-    border: 1px solid black;
-    /*display: flex;*/
+.parent {
+    display: grid;
+    grid-template-columns: repeat(8, 10em);
+    grid-template-rows: repeat(8, 10em);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    position: center;
     justify-content: center;
-    align-items: center;
 }
 
-.one {
-    grid-area: one;
-    background-color: #3B94D9;
+.div1 {
+    grid-area: 1 / 1 / 3 / 3;
+    background-color: #30447B;
+    border: 10px solid black;
 }
-.two {
-    grid-area: two;
+.div2 {
+    grid-area: 3 / 1 / 6 / 3;
+    background-color: #FACC48;
+    border: 10px solid black;
+}
+.div3 {
+    grid-area: 6 / 1 / 8 / 3;
+    background-color: white;
+    border: 10px solid black;
+}
+.div4 {
+    grid-area: 8 / 1 / 9 / 3;
     background-color: #DD332F;
+    border: 10px solid black;
 }
-.three {
-    grid-area: three;
-    background-color: #b4d455 ;
+.div5 {
+    grid-area: 1 / 3 / 4 / 9;
+    background-color: #DD332F;
+    border: 10px solid black;
 }
-.four {
-    grid-area: four;
-    background-color: mediumpurple;
+.div6 {
+    grid-area: 4 / 5 / 6 / 9;
+    background-color: white;
+    border: 10px solid black;
 }
-.five {
-    grid-area: five;
-    background-color: lightcoral;
+.div7 {
+    grid-area: 6 / 5 / 8 / 9;
+    background-color: #FACC48;
+    border: 10px solid black;
 }
-.six {
-    grid-area: six;
-    background-color: indianred;
+.div8 {
+    grid-area: 4 / 3 / 8 / 5;
+    background-color: white;
+    border: 10px solid black;
 }
-.seven {
-    grid-area: seven;
-    background-color: green;
-}
-.eight {
-    grid-area: eight;
-    background-color: cornflowerblue;
-}
-.nine {
-    grid-area: nine;
-    background-color: blueviolet;
+.div9 {
+    grid-area: 8 / 3 / 9 / 9;
+    background-color: #30447B;
+    border: 10px solid black;
 }
