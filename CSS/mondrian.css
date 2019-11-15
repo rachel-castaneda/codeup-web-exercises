@@ -1,7 +1,10 @@
 * {
     box-sizing: border-box;
 }
-.parent {
+body {
+    margin: 0;
+}
+main {
     display: grid;
     grid-template-columns: repeat(8, 10em);
     grid-template-rows: repeat(8, 10em);
