@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    text-align: left;
+}
+main {
+    display: grid;
+    height: 100vh;
+    grid-gap: 6px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+main div {
+    background-color: limegreen;
+}
+#header {
+    grid-area: 1/1/2/7;
+}
+#nav {
+    grid-area: 2/1/5/2;
+}
+#article {
+    grid-area: 2/2/4/7;
+}
+#ads {
+    grid-area: 4/2/5/7;
+}
+#footer {
+    grid-area: 5/1/6/7;
+}
