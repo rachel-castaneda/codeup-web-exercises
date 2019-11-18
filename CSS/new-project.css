@@ -9,7 +9,7 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10em auto;
+    grid-template-rows: 4em auto;
 }
 nav {
     grid-area: 1/1/2/2;
@@ -17,11 +17,11 @@ nav {
 }
 nav ul {
     list-style: none;
-    align-self: end;
+    align-self: flex-start;
     display: flex;
     color: black;
     justify-content: space-evenly;
-    font-size: xx-large;
+    font-size: large;
     font-family: 'Changa', sans-serif;
 }
 nav a {
