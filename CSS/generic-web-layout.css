@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    text-align: left;
+}
+main {
+    display: grid;
+    grid-gap: 5px;
+    background-color: #58d1ff;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    height: 100vh;
+}
+main div {
+    background-color: mediumpurple;
+}
+#nav {
+    grid-area: 1/1/2/16;
+}
+#menu {
+    grid-area: 2/1/16/2;
+}
+#page {
+    grid-area: 2/3/14/11;
+}
+#footer {
+    grid-area: 15/3/16/11;
+}
