@@ -20,7 +20,9 @@
         }
         h1 {
             text-align: center;
-            position: center;
+            background-color: white;
+            opacity: .75;
+            color: gray;
         }
         .btn-primary {
             width: 10%;
@@ -53,102 +55,110 @@
     </nav>
     <!--NAVBAR ends-->
 <div class="container">
+
     <!--JUMBOTRON-->
     <div class="jumbotron jumbotron-fluid" id="main-jumbotron">
             <h1 class="display-4">Welcome to Pizza World!</h1>
         </div>
     </div>
     <!--JUMBOTRON ends-->
+    <h2>Build Your Own Pizza</h2>
 
-<h2>Build Your Own Pizza</h2>
+    <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#tab1">Size and Crust<span class="badge badge-pill badge-light">1</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#tab2">Cheese and Sauce<span class="badge badge-pill badge-light">2</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#tab3">Toppings<span class="badge badge-pill badge-light">3</span></a>
+        </li>
+    </ul>
 
-    <!--NAV TABS-->
+    <div class="tab-content">
+        <div class="tab-pane active" id="size-and-crust-tab-content" role="tabpanel" aria-labelledby="size-and-crust-tab">
 
-<div class="card text-left"> <!--CARD DIV OPEN-->
+            <!--CARDS FOR SIZE AND CRUST-->
+            <div class="card-body"> <!--FIRST TAB DIV OPEN-->
+                <div class="card-text">Choose Size and Crust</div>
+            </div>
+            <div class="card text-left" style="width: 100%;">
+                <div class="card-header">
+                    Hand Tossed
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                    <li class="list-group-item">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1"></label>
+                        </div>Small (10")</li>
+                    <li class="list-group-item">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1"></label>
+                        </div>Medium (12")</li>
+                </ul>
 
-    <div class="card-header"> <!--TAB DIV OPEN-->
+                <!--second card-->
+                <div class="card text-left" style="width: 100%;">
+                    <div class="card-header">
+                        Crispy Thin
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                        <li class="list-group-item">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1"></label>
+                            </div>Medium (12")</li>
+                        <li class="list-group-item">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1"></label>
+                            </div>Large (14")</li>
+                    </ul>
+                    <div class="card-footer text-right">
+                        <a href="#" class="btn btn-primary" style="width: 18rem">Next Step ></a>
+                    </div>
+                </div>
 
-        <ul class="nav nav-tabs card-header-tabs">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Size and Crust<span class="badge badge-pill badge-light">1</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Cheese and Sauce<span class="badge badge-pill badge-light">2</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Toppings<span class="badge badge-pill badge-light">3</span></a>
-            </li>
-        </ul>
-    </div> <!--TAB DIV CLOSE-->
-    <!--NAVTABS end-->
+            </div> <!--SIZE/CRUST DIV CLOSED-->
+            <!--SIZE AND CRUST CARD ends-->
 
-    <!--CARDS FOR SIZE AND CRUST-->
-    <div class="card-body"> <!--FIRST TAB DIV OPEN-->
-        <p class="card-text">Choose Size and Crust</p>
+        </div>
+
+        <div class="tab-pane" id="cheese-and-sauce-tab-content" role="tabpanel" aria-labelledby="cheese-and-sauce-tab">
+
+            <div class="card-body">
+                <p class="card-text">Cheese and Sauce</p>
+            </div>
+            <div class="card text-left" style="width: 100%;"> <!--CHEESE CARD DIV OPEN-->
+                <div class="card-header">
+                    Cheese
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">How Much?
+                        <select class="form-control">
+                            <option>Default select</option>
+                        </select>
+                    </li>
+
+                    <div class="card-footer text-right">
+                        <a href="#" class="btn btn-primary" style="width: 15%">< Previous Step</a>
+                        <a href="#" class="btn btn-primary" style="width: 12%">Next Step ></a>
+                    </div>
+            </div> <!--CHEESE CARD DIV CLOSE-->
+
+        </div>
+
+        <div class="tab-pane" id="toppings-tab-content" role="tabpanel" aria-labelledby="toppings-tab">
+            ...
+        </div>
     </div>
-    <div class="card text-left" style="width: 100%;">
-        <div class="card-header">
-            Hand Tossed
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
-            <li class="list-group-item">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1"></label>
-                </div>Small (10")</li>
-            <li class="list-group-item">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1"></label>
-                </div>Medium (12")</li>
-        </ul>
 
-    <!--second card-->
-    <div class="card text-left" style="width: 100%;">
-        <div class="card-header">
-            Crispy Thin
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
-            <li class="list-group-item">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1"></label>
-                </div>Medium (12")</li>
-            <li class="list-group-item">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1"></label>
-                </div>Large (14")</li>
-        </ul>
-        <div class="card-footer text-right">
-            <a href="#" class="btn btn-primary">Next Step ></a>
-        </div>
-    </div>
 
-    </div> <!--SIZE/CRUST DIV CLOSED-->
-    <!--SIZE AND CRUST CARD ends-->
-
-    <div class="card-body">
-        <p class="card-text">Cheese and Sauce</p>
-    </div>
-    <div class="card text-left" style="width: 100%;">
-        <div class="card-header">
-            Cheese
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">How Much?
-                <select class="form-control">
-                    <option>Default select</option>
-                </select>
-            </li>
-
-        <div class="card-footer text-right">
-            <a href="#" class="btn btn-primary">< Previous Step</a>
-            <a href="#" class="btn btn-primary">Next Step ></a>
-        </div>
-    </div>
 
 </div> <!--CONTAINER CLOSED-->
 
