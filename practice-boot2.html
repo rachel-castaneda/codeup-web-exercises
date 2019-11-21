@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Anton&display=swap" rel="stylesheet">
+    <title>Practice 2</title>
+
+    <style>
+        .container {
+            background-color: #f0f0f0;
+        }
+        .nav-item {
+            font-family: 'Abel', sans-serif;
+        }
+        .nav-container {
+            background-color: white;
+            margin-top: 3em;
+            /*padding-left: 0;*/
+            /*padding-right: 0;*/
+        }
+        .nav-link {
+            color: black;
+        }
+        #logo-item {
+            margin-left: 8em;
+        }
+        #logo-title {
+            font-family: 'Abel', sans-serif;
+        }
+        #last-nav-item {
+            margin-right: 8em;
+        }
+        #lg-header {
+            font-family: 'Anton', sans-serif;
+            /*font-size: 32px;*/
+        }
+        #sm-header {
+            font-family: 'Anton', sans-serif;
+        }
+        #cir-1 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 5px solid white;
+            font-family: 'Anton', sans-serif;
+            font-size: medium;
+            background-color: #E6563B;
+            color: white;
+        }
+        #cir-2 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 5px solid white;
+            font-family: 'Anton', sans-serif;
+            font-size: medium;
+            background-color: #DF9F3D;
+            color: white;
+        }
+        #cir-3 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 5px solid white;
+            font-family: 'Anton', sans-serif;
+            font-size: medium;
+            background-color: #7cb06c;
+            color: white;
+        }
+        #cir-4 {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            border: 5px solid white;
+            font-family: 'Anton', sans-serif;
+            font-size: medium;
+            background-color: #00aba9;
+            color: white;
+        }
+        #dot-1 {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #E6563B;
+        }
+        #dot-2 {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #DF9F3D;
+        }
+        #dot-3 {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #7cb06c;
+        }
+        #dot-4 {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: #00aba9;
+        }
+/*need to adjust length of line*/ #hr-custom {
+            border-top: 3px solid #e6e6e6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container"> <!---DIV START FOR MAIN CONTAINER--->
+
+        <div class="row"><!---MADE FIRST ROW ABOVE NAV BAR---->
+            <div class="col-12"></div>
+        </div>
+
+        <div class="nav-container"><!---DIV START FOR NAV CONTAINER--->
+
+            <div class="row"><!----DIV START FOR NAV BAR ROW--->
+
+                <div class="col-12 p-0"><!----DIV START FOR NAV BAR COLUMN---->
+                    <ul class="nav justify-content-start align-items-center bg-white"><!---NAV BAR START---->
+
+                        <li class="nav-item" id="logo-item"><!----LOGO ITEM IN NAV BAR--->
+                            <img src="img/logo-copy.jpg" width=105px height=105px alt="design-logo">
+                        </li>
+                        <li class="nav-item mr-auto">
+                            <h3 id="logo-title">codeup design</h3>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <a class="nav-link" href="#">SERVICE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">WORK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BLOG</a>
+                        </li>
+                        <li class="nav-item" id="last-nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+
+                    </ul><!---NAV BAR END----->
+                </div><!----DIV END FOR NAV BAR COLUMN--->
+
+            </div><!------DIV END FOR NAV BAR ROW---->
+
+        </div><!---DIV END FOR NAV CONTAINER---->
+
+
+        <div class="row" id="lg-header"><!---ROW DIV START FOR HEADER----->
+
+            <div class="col-6 offset-lg-3 text-center mt-3"><!----COLUMN DIV START------>
+                <h2>VISUAL DESIGN & WEB DEVELOPMENT</h2><!---need to adjust height of heading--->
+            </div><!----COLUMN DIV END----->
+
+        </div><!----ROW DIV END FOR HEADER---->
+
+
+        <div class="row" id="sm-header"><!---ROW DIV START FOR SMALLER HEADING--->
+            <div class="col-6 offset-lg-3 text-center mt-3"><!-------COLUMN DIV START----->
+                <h3>FROM PARK CITY, UTAH</h3><!----needs to adjust the height of heading---->
+            </div><!-----COLUMN DIV END------>
+        </div><!---ROW DIV END FOR SMALLER HEADER---->
+
+        <div class="row"><!----START ROW DIV FOR DESIGN CIRCLES--->
+
+            <div class="col-6 offset-lg-3 text-center mt-3"><!-----START COLUMN DIV---->
+                <button type="button" class="btn" id="cir-1">DESIGN</button>
+                <button type="button" class="btn" id="cir-2">DEVELOP</button>
+                <button type="button" class="btn" id="cir-3">SUPPORT</button>
+                <button type="button" class="btn" id="cir-4">HOST</button>
+            </div><!---END COLUMN DIV----->
+
+        </div><!----END ROW DIV FOR DESIGN CIRCLES--->
+
+        <hr id="hr-custom"><!---need to adjust length of line--->
+
+        <div class="row"><!----ROW DIV START FOR SUBSECTIONS--->
+
+            <div class="col-4 offset-lg-2"><!---SELECTED WORK COLUMN DIV START--->
+                SELECTED WORK
+            </div><!----SELECTED WORK DIV END---->
+
+            <div class="col-2 offset-lg-2"><!----THE LAST COLUMN DIV START--->
+                THE LAST
+            </div><!---THE LAST COLUMN DIV END---->
+
+        </div><!---ROW DIV END FOR SUBSECTIONS--->
+
+        <div class="row"><!---ROW DIV START FOR IMAGES--->
+
+            <div class="col-2"><!----DIV COLUMN START---->
+                <!---use cards for img--->
+            </div><!----DIV COLUMN END---->
+
+            <div class="col-2"><!---DIV COLUMN START---->
+                <!---use cards for img--->
+            </div><!---DIV COLUMN END--->
+
+            <div class="col-2"><!---DIV COLUMN START---->
+                <!---use cards for img--->
+            </div><!---DIV COLUMN END--->
+
+        </div><!----ROW DIV END FOR IMAGES SECTION--->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;-&#45;&#45;&#45;&#45;FOR MAKING SMALL CIRCLES&#45;&#45;&ndash;&gt;    <div class="row">-->
+<!--            <div class="col-6">-->
+<!--                <button type="button" class="btn" id="dot-1">D</button>-->
+<!--                <button type="button" class="btn" id="dot-2">D</button>-->
+<!--                <button type="button" class="btn" id="dot-3">S</button>-->
+<!--                <button type="button" class="btn" id="dot-4">H</button>-->
+<!--            </div>-->
+<!--        </div>     &lt;!&ndash;-&#45;&#45;HOW TO MAKE SMALL CIRCLES-&#45;&#45;&ndash;&gt;-->
+
+    </div><!----DIV END FOR MAIN CONTAINER---->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
