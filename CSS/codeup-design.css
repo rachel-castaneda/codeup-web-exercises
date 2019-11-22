@@ -155,3 +155,17 @@
     margin-right: 27px;
     margin-top: 1em;
 }
+#twitter{
+    color: #1DA1F3;
+}
+#tweet{
+    color: black;
+    margin-left: 1em;
+    font-family: 'Abel', sans-serif;
+}
+#last-tweet {
+    max-width: 100%;
+    display: inline;
+    /*font-weight: lighter;*/
+    font-size: 8px;
+}
