@@ -8,117 +8,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Abel|Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/codeup-design.css">
     <title>Practice 2</title>
 
-    <style>
-        .container {
-            background-color: #f0f0f0;
-            max-width: 100%;
-        }
-        .nav-item {
-            font-family: 'Abel', sans-serif;
-        }
-        .nav-container {
-            background-color: white;
-            margin-top: 3em;
-            /*padding-left: 0;*/
-            /*padding-right: 0;*/
-        }
-        .nav-link {
-            color: black;
-        }
-        #logo-item {
-            margin-left: 8em;
-        }
-        #logo-title {
-            font-family: 'Abel', sans-serif;
-        }
-        #last-nav-item {
-            margin-right: 8em;
-        }
-        #lg-header {
-            font-family: 'Anton', sans-serif;
-            /*font-size: 32px;*/
-        }
-        #sm-header {
-            font-family: 'Anton', sans-serif;
-        }
-        #cir-1 {
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            display: inline-block;
-            border: 5px solid white;
-            font-family: 'Anton', sans-serif;
-            font-size: medium;
-            background-color: #E6563B;
-            color: white;
-        }
-        #cir-2 {
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            display: inline-block;
-            border: 5px solid white;
-            font-family: 'Anton', sans-serif;
-            font-size: medium;
-            background-color: #DF9F3D;
-            color: white;
-        }
-        #cir-3 {
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            display: inline-block;
-            border: 5px solid white;
-            font-family: 'Anton', sans-serif;
-            font-size: medium;
-            background-color: #7cb06c;
-            color: white;
-        }
-        #cir-4 {
-            height: 100px;
-            width: 100px;
-            border-radius: 50%;
-            display: inline-block;
-            border: 5px solid white;
-            font-family: 'Anton', sans-serif;
-            font-size: medium;
-            background-color: #00aba9;
-            color: white;
-        }
-        #dot-1 {
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            display: inline-block;
-            background-color: #E6563B;
-        }
-        #dot-2 {
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            display: inline-block;
-            background-color: #DF9F3D;
-        }
-        #dot-3 {
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            display: inline-block;
-            background-color: #7cb06c;
-        }
-        #dot-4 {
-            height: 25px;
-            width: 25px;
-            border-radius: 50%;
-            display: inline-block;
-            background-color: #00aba9;
-        }
-/*need to adjust length of line*/ #hr-custom {
-            border-top: 3px solid #e6e6e6;
-        }
-    </style>
 </head>
 
 <body>
@@ -165,7 +57,7 @@
 
         <div class="row" id="lg-header"><!---ROW DIV START FOR HEADER----->
 
-            <div class="col-6 offset-lg-3 text-center mt-3"><!----COLUMN DIV START------>
+            <div class="col-6 offset-lg-3 text-center mt-5"><!----COLUMN DIV START------>
                 <h2>VISUAL DESIGN & WEB DEVELOPMENT</h2><!---need to adjust height of heading--->
             </div><!----COLUMN DIV END----->
 
@@ -181,53 +73,62 @@
         <div class="row"><!----START ROW DIV FOR DESIGN CIRCLES--->
 
             <div class="col-6 offset-lg-3 text-center mt-3"><!-----START COLUMN DIV---->
-                <button type="button" class="btn" id="cir-1">DESIGN</button>
-                <button type="button" class="btn" id="cir-2">DEVELOP</button>
-                <button type="button" class="btn" id="cir-3">SUPPORT</button>
-                <button type="button" class="btn" id="cir-4">HOST</button>
+                <button type="button" class="btn mx-2" id="cir-1">DESIGN</button>
+                <button type="button" class="btn mx-2" id="cir-2">DEVELOP</button>
+                <button type="button" class="btn mx-2" id="cir-3">SUPPORT</button>
+                <button type="button" class="btn mx-2" id="cir-4">HOST</button>
             </div><!---END COLUMN DIV----->
 
         </div><!----END ROW DIV FOR DESIGN CIRCLES--->
 
         <hr id="hr-custom"><!---need to adjust length of line--->
 
-        <div class="row"><!----ROW DIV START FOR SUBSECTIONS--->
-
-            <div class="col-4 offset-lg-2 mt-5"><!---SELECTED WORK COLUMN DIV START--->
-                SELECTED WORK
-            </div><!----SELECTED WORK DIV END---->
-
-            <div class="col-2 offset-lg-2 mt-5"><!----THE LAST COLUMN DIV START--->
-                THE LAST
-            </div><!---THE LAST COLUMN DIV END---->
-
-        </div><!---ROW DIV END FOR SUBSECTIONS--->
-
         <div class="row"><!---ROW DIV START FOR IMAGES--->
 
-            <div class="col-2"><!----DIV COLUMN START---->
-                <div class="card col-12" style="width: 18em;" id="green-apples">
-                    <img src="img/logo-copy.jpg" width=105px height=105px alt="design-logo">
-                </div>
-
-                <div class="card col-12" style="width: 18em;" id="apples">
-                    <img src="img/logo-copy.jpg" width=105px height=105px alt="design-logo">
-                </div>
+            <div class="col-2 offset-lg-3 my-5"><!----DIV COLUMN START---->
+                    <h6 id="select">SELECTED WORK</h6>
+                    <div id="img-apples">
+                        <img src="img/apples-ipad.jpg" width=210px height=116px alt="design-logo">
+                    </div>
+                        FEATURED PROJECT
+                    <div class="mt-3" id="img-man">
+                        <img src="img/man.jpg" width=210px height=116px alt="design-logo">
+                    </div>
+                        FEATURE PROJECT
             </div><!----DIV COLUMN END---->
 
-            <div class="col-2"><!---DIV COLUMN START---->
-                <div class="card col-12" style="width: 18em;" id="green-apples">
-                    <img src="img/logo-copy.jpg" width=105px height=105px alt="design-logo">
-                </div>
-
-                <div class="card col-12" style="width: 18em;" id="green-apples">
-                    <img src="img/logo-copy.jpg" width=105px height=105px alt="design-logo">
-                </div>
+            <div class="col-2 my-5"><!---DIV COLUMN START---->
+                    <div id="img-mac">
+                        <img src="img/macbook.jpg" width=210px height=116px alt="design-logo">
+                    </div>
+                        FEATURED PROJECT
+                    <div class="mt-3" id="img-security">
+                        <img src="img/security.jpg" width=210px height=116px alt="design-logo">
+                    </div>
+                        FEATURED PROJECT
             </div><!---DIV COLUMN END--->
 
-            <div class="col-2"><!---DIV COLUMN START---->
-                <!---use cards for img--->
-            </div><!---DIV COLUMN END--->
+            <div class="col-2 my-5 p-0"><!---DIV THUMBNAIL COLUMN START---->
+                <h6 id="the-last">THE LAST</h6>
+                <div>
+                    <img src="img/mobile-phone.jpg" alt="mobile-phone-thumbnail" class="img-thumbnail">
+                    <h6 id="headline1">THE ADMIN BAR <br>AND ABSOLUTE POSITIONING</h6>
+                </div>
+                <div>
+                    <img src="img/head.jpg" alt="head-thumbnail" class="img-thumbnail mt-2">
+                    <h6 id="headline2">NIBBLER AWESOME <br>WEBSITE TESTING</h6>
+                </div>
+                <div>
+                    <img src="img/ipad.jpg" alt="ipad-thumbnail" class="img-thumbnail mt-2">
+                    <h6 id="headline3">HOW TO GET GOOGLE TO <br>LIKE YOU</h6>
+                </div>
+            </div><!---DIV THUMBNAIL COLUMN END--->
+
+<!--            <div class="col-2" id="headlines">-->
+<!--                <h6>THE ADMIN BAR <br>AND ABSOLUTE POSITIONING</h6>-->
+<!--                <h6>NIBBLER AWESOME <br>WEBSITE TESTING</h6>-->
+<!--                <h6>HOW TO GET GOOGLE TO <br>LIKE YOU</h6>-->
+<!--            </div>-->
 
         </div><!----ROW DIV END FOR IMAGES SECTION--->
 
