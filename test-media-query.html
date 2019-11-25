@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/test-media-query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+
+    <title>TEST MEDIA QUERY</title>
+</head>
+<body>
+
+<div class="container" id="main-container"><!-----MAIN CONTAINER START----->
+
+    <div class="row"><!---FILLER ROW ABOVE NAV---->
+        <div class="col-12"></div>
+    </div><!----END OF FILLER ROW---->
+
+    <div class="nav-container"><!----NAV CONTAINER START---->
+        <div class="row mx-0 p-0 d-none d-sm-block"><!----NAV ROW START--->
+            <div class="col-12 p-0">
+                <ul class="nav justify-content-start align-items-center bg-white w-auto"><!---NAV BAR START---->
+
+                    <li class="nav-item ml-5" id="logo-item"><!----LOGO ITEM IN NAV BAR--->
+                        <img src="img/logo-copy.jpg" width=105px height=105px alt="design-logo">
+                    </li>
+                    <li class="nav-item">
+                        <h3 id="logo-title">codeup design</h3>
+                    </li>
+                    <li class="nav-item ml-auto">
+                        <a class="nav-link" href="#">SERVICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item mr-3" id="last-nav-item">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+
+                </ul><!---NAV BAR END----->
+            </div>
+        </div><!-----NAV ROW END----->
+    </div><!----NAV CONTAINER END------>
+
+    <div class="nav-container"><!----NAV CONTAINER START---->
+        <div class="row mx-0 p-0 d-block d-sm-none"><!----NAV ROW START--->
+            <div class="col-12 p-0">
+                <ul class="nav justify-content-start align-items-center bg-white w-auto"><!---NAV BAR START---->
+                    <li class="nav-item ml-auto">
+                        <a class="nav-link" href="#">SERVICE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">WORK</a>
+                    </li>
+                    <li class="nav-item ml-5" id="logo-item2"><!----LOGO ITEM IN NAV BAR--->
+                        <img src="img/logo-copy.jpg" width=105px height=105px alt="design-logo">
+                    </li>
+                    <li class="nav-item mr-auto">
+                        <h3 id="logo-title2">codeup design</h3>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item mr-3" id="last-nav-item2">
+                        <a class="nav-link" href="#">CONTACT</a>
+                    </li>
+
+                </ul><!---NAV BAR END----->
+            </div>
+        </div><!-----NAV ROW END----->
+    </div><!----NAV CONTAINER END------>
+
+    <div class="row"><!----MAIN HEADER ROW START---->
+        <div class="col-12">
+            <h3 class="text-center">VISUAL DESIGN & WEB DEVELOPMENT</h3>
+        </div>
+    </div><!----MAIN HEADER ROW END---->
+    <div class="row"><!----SMALL HEADER ROW START----->
+        <div class="col-12">
+            <h4 class="text-center">FROM PARK CITY, UTAH</h4>
+        </div>
+    </div><!----SMALLER HEADER ROW END--->
+    <div class="row d-none d-sm-block"><!----DESIGN CIRCLES ROW START---->
+        <div class="col-12 text-center mt-3">
+            <div class="btn btn-default pt-4 mx-2 cir-1">DESIGN</div>
+            <div class="btn btn-default pt-4 mx-2 cir-2">DEVELOP</div>
+            <div class="btn btn-default pt-4 mx-2 cir-3">SUPPORT</div>
+            <div class="btn btn-default pt-4 mx-2 cir-4">HOST</div>
+        </div>
+    </div><!----DESIGN CIRCLES ROW END---->
+    <div class="row d-block d-sm-none">
+        <div class="col-12 text-center">
+            <div class="cir-1-2">
+                <button type="button" class="btn btn-default cir-1">DESIGN</button>
+                <button type="button" class="btn btn-default cir-2">DEVELOP</button>
+            </div>
+            <div class="cir-3-4">
+                <button type="button" class="btn btn-default cir-3">SUPPORT</button>
+                <button type="button" class="btn btn-default cir-4">HOST</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row d-none d-md-block"><!---FINAL ROW WITH IMAGES AND SUBSECTIONS--->
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="img/apples-ipad.jpg" width="210px" height="116px" class="embed-responsive-item">
+            <img src="img/man.jpg" width="210px" height="116px" alt="" class="embed-responsive-item">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4 offset-sm2 offset-md-3">
+            <img src="img/macbook.jpg" width="210px" height="116px" alt="" class="embed-responsive-item">
+            <img src="img/security.jpg" width="210px" height="116px" alt="" class="embed-responsive-item">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <img src="img/mobile-phone.jpg" alt="" class="img-thumbnail embed-responsive-item">
+            <img src="img/head.jpg" alt="" class="img-thumbnail embed-responsive-item">
+            <img src="img/ipad.jpg" alt="" class="img-thumbnail embed-responsive-item">
+        </div>
+    </div><!----FINAL ROW WITH IMAGES AND SUBSECTIONS--->
+
+
+</div><!-----MAIN CONTAINER END----->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -17,15 +17,15 @@
 .nav-link {
     color: black;
 }
-#logo-item {
-    margin-left: 21em;
-}
+/*#logo-item {*/
+/*    margin-left: 21em;*/
+/*}*/
 #logo-title {
     font-family: 'Abel', sans-serif;
 }
-#last-nav-item {
-    margin-right: 18em;
-}
+/*#last-nav-item {*/
+/*    margin-right: 18em;*/
+/*}*/
 #lg-header {
     font-family: 'Anton', sans-serif;
     /*font-size: 32px;*/

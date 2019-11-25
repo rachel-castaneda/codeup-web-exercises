@@ -1,9 +1,14 @@
 *{
     box-sizing: border-box;
 }
+body {
+
+}
 .container {
     background-color: #f0f0f0;
     max-width: 100%;
+    margin: 0;
+    /*text-align: center;*/
 }
 .nav-item {
     font-family: 'Abel', sans-serif;
@@ -11,6 +16,8 @@
 .nav-container {
     background-color: white;
     margin-top: 3em;
+    margin-left: 0;
+    margin-right: 0;
     /*padding-left: 0;*/
     /*padding-right: 0;*/
 }
@@ -18,12 +25,21 @@
     color: black;
 }
 #logo-item {
-    margin-left: 0;
+    margin: 0;
 }
 #logo-title {
     font-family: 'Abel', sans-serif;
 }
 #last-nav-item {
+    /*margin-right: 18em;*/
+}
+#logo-item2 {
+    margin: 0;
+}
+#logo-title2 {
+    font-family: 'Abel', sans-serif;
+}
+#last-nav-item2 {
     /*margin-right: 18em;*/
 }
 #lg-header {
@@ -33,7 +49,7 @@
 #sm-header {
     font-family: 'Anton', sans-serif;
 }
-#cir-1 {
+.cir-1 {
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -43,8 +59,9 @@
     font-size: medium;
     background-color: #E6563B;
     color: white;
+    text-align: center;
 }
-#cir-2 {
+.cir-2 {
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -54,8 +71,9 @@
     font-size: medium;
     background-color: #DF9F3D;
     color: white;
+    text-align: center;
 }
-#cir-3 {
+.cir-3 {
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -65,8 +83,9 @@
     font-size: medium;
     background-color: #7cb06c;
     color: white;
+    text-align: center;
 }
-#cir-4 {
+.cir-4 {
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -76,6 +95,7 @@
     font-size: medium;
     background-color: #00aba9;
     color: white;
+    text-align: center;
 }
 #dot-1 {
     height: 25px;
