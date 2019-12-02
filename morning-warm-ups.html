@@ -102,15 +102,29 @@
     // console.log(greaterThanTen(12));
 
     // js function called youMayEnter that accepts a number that is an age. if the age is 13 or greater, return "you may enter" else, return "sorry, you need a parent or guardian to enter."
-    var youMayEnter = function (numInput) {
-        if (numInput >= 13) {
-            return "You may enter!";
+    // var youMayEnter = function (numInput) {
+    //     if (numInput >= 13) {
+    //         return "You may enter!";
+    //     } else {
+    //         return "Sorry, you need a parent or guardian to enter.";
+    //     }
+    // }
+    // console.log(youMayEnter(12));
+    // console.log(youMayEnter(16));
+
+    // js function called seeYouLater that accepts a string, if the string is alligator, return "see, you later alligator", is the string is crocodile, then return "after a while, crocodile" if string is neither, reutrn "so long"
+    var seeYouLater = function (inputString) {
+        if (inputString === "alligator") {
+            return "See, you later alligator."
+        } else if (inputString === "crocodile") {
+            return "After a while, crocodile"
         } else {
-            return "Sorry, you need a parent or guardian to enter.";
+            return "So long"
         }
     }
-    console.log(youMayEnter(12));
-    console.log(youMayEnter(16));
+    console.log(seeYouLater("alligator"));
+    console.log(seeYouLater("crocodile"));
+    console.log(seeYouLater("dog"));
 
 </script>
 </body>
