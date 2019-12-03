@@ -73,7 +73,14 @@ var random = Math.floor((Math.random() * 3) + 1);
   // Create a function named 'calculateTip' to calculate a tip on a bill at a
   // restaurant. The function should accept a tip percentage and the total of the
   // bill, and return the amount to tip
-  //
+
+    // function calculateTip(num1 , num2) {
+    //     return num1 * num2
+    // }
+    // console.log(calculateTip(0.20 , 20));
+    // console.log(calculateTip(0.25 , 25.50));
+    // console.log(calculateTip(0.15 , 33.42));
+
   // Examples:
   // > calculateTip(0.20, 20) // returns 4
   // > calculateTip(0.25, 25.50) // returns 6.37
@@ -86,9 +93,12 @@ var random = Math.floor((Math.random() * 3) + 1);
   // prompt the user for the bill total and a percentage they would like to tip,
   // then display the dollar amount they should tip
 
-    var calculateTip =  Number(prompt("What is the bill total?"))
-                        Number(prompt("How much would you like to tip?"))
-alert("You should tip " + calculateTip)
+    // function calculateTip(num1, num2) {
+    //     num1 = prompt("what percentage would you like to tip?");
+    //     num2 = prompt("what was your bill total?");
+    //     return num1 * num2
+    // }
+    // alert("You should tip $" + (calculateTip()))
 
 
   //
@@ -97,7 +107,9 @@ alert("You should tip " + calculateTip)
   // (before a discount is applied), and a discount percentage (a number between 0
   // and 1). It should return the result of applying the discount to the original
   // price.
-  //
+
+
+
   // Example:
   // > var originalPrice = 100;
   // > var dicountPercent = .2; // 20%
