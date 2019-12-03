@@ -3,10 +3,10 @@
 
   // TODO:
   // Create a function called 'sayHello' that takes a parameter 'name'.
- // function sayHello(name) {
- //    return "Hello, " + name + "!"
- // }
-// console.log(sayHello("codeup"))
+ function sayHello(name) {
+    return "Hello, " + name + "!"
+ }
+console.log(sayHello("codeup"))
   // When called, the function should return a message that says hello to the passed in name.
   //
   // Example
@@ -17,10 +17,8 @@
  // Call the function 'sayHello' and pass your name as a string literal argument.
  // Store the result of the function call in a variable named 'helloMessage'.
  // console.log 'helloMessage' to check your work
-// var helloMessage = function sayHello(name) {
-//      return "Hello, " + name + "!"
-// }
-// console.log(helloMessage("Rachel"))
+var helloMessage = sayHello("Rachel");
+console.log(helloMessage);
 
 
 
@@ -28,11 +26,11 @@
   // Store your name as a string in a variable named 'myName', and pass that
   // variable to the 'sayHello' function. You should see the same output in the
   // console.
-// var myName = "Rachel"
-// function sayHello(myName) {
-//      return "Hello, " + myName + "!"
-// }
-// console.log(sayHello(myName))
+var myName = "Rachel"
+function sayHello(myName) {
+     return "Hello, " + myName + "!"
+}
+console.log(sayHello(myName))
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
@@ -43,19 +41,13 @@ var random = Math.floor((Math.random() * 3) + 1);
   // The function should return a boolean value based on whether or not the passed
   // number is the number 2.
 
-    // function isTwo(num) {
-    //     if (num === 2) {
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    //     isTwo(random);
-    // }
-    //
-    // console.log(isTwo(random))
-    // console.log(isTwo(3))
-    // console.log(isTwo(4))
+    function isTwo(num) {
+        return num === 2
+    }
+    console.log(isTwo(random))
+    // console.log(isTwo(1))
     // console.log(isTwo(2))
+    // console.log(isTwo(3))
   // Example
   // > isTwo(1) // returns false
   // > isTwo(2) // returns true
@@ -74,12 +66,12 @@ var random = Math.floor((Math.random() * 3) + 1);
   // restaurant. The function should accept a tip percentage and the total of the
   // bill, and return the amount to tip
 
-    // function calculateTip(num1 , num2) {
-    //     return num1 * num2
-    // }
-    // console.log(calculateTip(0.20 , 20));
-    // console.log(calculateTip(0.25 , 25.50));
-    // console.log(calculateTip(0.15 , 33.42));
+    function calculateTip(tipPercent , billTotal) {
+        return tipPercent * billTotal
+    }
+    console.log(calculateTip(0.20 , 20));
+    console.log(calculateTip(0.25 , 25.50));
+    console.log(calculateTip(0.15 , 33.42));
 
   // Examples:
   // > calculateTip(0.20, 20) // returns 4
@@ -91,14 +83,14 @@ var random = Math.floor((Math.random() * 3) + 1);
   // TODO:
   // Use prompt and alert in combination with your calculateTip function to
   // prompt the user for the bill total and a percentage they would like to tip,
-  // then display the dollar amount they should tip
-
-    // function calculateTip(num1, num2) {
-    //     num1 = prompt("what percentage would you like to tip?");
-    //     num2 = prompt("what was your bill total?");
-    //     return num1 * num2
-    // }
-    // alert("You should tip $" + (calculateTip()))
+  // // then display the dollar amount they should tip
+  //
+  //   function calculateTip(num1, num2) {
+  //       num1 = prompt("what percentage would you like to tip?");
+  //       num2 = prompt("what was your bill total?");
+  //       return num1 * num2
+  //   }
+  //   alert("You should tip $" + (calculateTip()))
 
 
   //
@@ -108,8 +100,10 @@ var random = Math.floor((Math.random() * 3) + 1);
   // and 1). It should return the result of applying the discount to the original
   // price.
 
-
-
+    function applyDiscount(originalPrice, discountPercent) {
+        return originalPrice*(1-discountPercent)
+    }
+    console.log(applyDiscount(45.99, 0.12)); // 40.4712)
   // Example:
   // > var originalPrice = 100;
   // > var discountPercent = .2; // 20%
