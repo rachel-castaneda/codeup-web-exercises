@@ -43,19 +43,19 @@ var random = Math.floor((Math.random() * 3) + 1);
   // The function should return a boolean value based on whether or not the passed
   // number is the number 2.
 
-    function isTwo(num) {
-        if (num === 2) {
-            return true;
-        } else {
-            return false;
-        }
-        isTwo(random);
-    }
-
-    console.log(isTwo(random))
-    console.log(isTwo(3))
-    console.log(isTwo(4))
-    console.log(isTwo(2))
+    // function isTwo(num) {
+    //     if (num === 2) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    //     isTwo(random);
+    // }
+    //
+    // console.log(isTwo(random))
+    // console.log(isTwo(3))
+    // console.log(isTwo(4))
+    // console.log(isTwo(2))
   // Example
   // > isTwo(1) // returns false
   // > isTwo(2) // returns true
@@ -85,6 +85,10 @@ var random = Math.floor((Math.random() * 3) + 1);
   // Use prompt and alert in combination with your calculateTip function to
   // prompt the user for the bill total and a percentage they would like to tip,
   // then display the dollar amount they should tip
+
+    var calculateTip =  Number(prompt("What is the bill total?"))
+                        Number(prompt("How much would you like to tip?"))
+alert("You should tip " + calculateTip)
 
 
   //
