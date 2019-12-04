@@ -17,14 +17,14 @@ console.log("hello from conditionals lec.js!");
 
 // ================ IF STATEMENT EXAMPLES ================
 //TODO Together: Show a specific navbar if user is admin
-
+//
 // if(isAdmin) {
 //     // show admin navbar
 //     // showAdminNavbar() <--function
 // }
 
 //TODO Together: Send a 20% off coupon if its users birthday
-
+//
 // if(isBirthday) {
 //     // send 20% off coupon
 //     // calls a function sendBirthdayEmail()
@@ -68,7 +68,7 @@ console.log("hello from conditionals lec.js!");
 // }
 
 //TODO: Write an if statement that alerts true if numberInput is greater than but not equal to 10
-
+//
 // var numberInput = 12
 // if(numberInput > 10) {
 //     alert("TRUE")
@@ -76,20 +76,20 @@ console.log("hello from conditionals lec.js!");
 
 //TODO: EXTRA BONUS - Refactor each of the previous statements as functions.
 
-//var numberOfLives = function (num) {
+// var numberOfLives = function (num) {
 //     if(num === 0) {
 //         return true
 //     }
 // }
 // console.log(numberOfLives(0));
-
+//
 //  var isSnow = function(input) {
 //     if(input === true) {
 //         return alert("it's snowing!")
 //     }
 // }
 // console.log(isSnow(true));
-
+//
 // var numberInput = function(numinput) {
 //      if(numinput > 10) {
 //          return alert("true")
@@ -189,7 +189,7 @@ console.log("hello from conditionals lec.js!");
 // console.log(isSnow(true));
 
 // SHOULD WE DELETE STUFF EXAMPLE
-
+//
 // var weShouldDeleteStuff = confirm('Are you sure you want to delete everything?');
 // console.log("the value of the confirm is : " + weShouldDeleteStuff);
 // if (weShouldDeleteStuff) {
@@ -271,6 +271,27 @@ console.log("hello from conditionals lec.js!");
 //     }
 // }
 // console.log(trafficLight("purple"));
+//
+// function trafficLight(colorInput) {
+//     var colorMessage;
+//
+//     switch (colorInput) {
+//         case "green" :
+//             colorMessage = "go";
+//             break;
+//         case "yellow" :
+//             colorMessage = "slow down";
+//             break;
+//         case "red" :
+//             colorMessage = "stop";
+//             break;
+//         default:
+//             colorMessage = "that's not a traffic light";
+//             break;
+//     }
+//     return colorMessage;
+// }
+// console.log(trafficLight("red"))
 
 // ================ NESTED STATEMENTS ===============
 //TODO Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligble for a license.
@@ -301,7 +322,7 @@ console.log("hello from conditionals lec.js!");
 // ================ TERNARY STATEMENT ================
 
 //TODO Together: Regular way
-
+//
 // var message;
 // var success = true;
 //
@@ -312,17 +333,15 @@ console.log("hello from conditionals lec.js!");
 // }
 // console.log(message);
 
-
 // var success = true;
 // var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
 // console.log(message)
-
 
 //TODO: Refactor the following conditional as a ternary
 
 // var weather = "sunny";
 // var weatherMessage;
-
+//
 // if(weather === "rainy"){
 //    weatherMessage = "It's raining!";
 // } else {
@@ -331,7 +350,9 @@ console.log("hello from conditionals lec.js!");
 
 //WRITE YOUR TERNARY STATEMENT HERE!
 
-
+// var weather = "sunny";
+// var weatherMessage = (weather === "rainy") ? "it's raining" : "have a nice day";
+// console.log(weatherMessage);
 
 // =============== SWITCH STATEMENT ================
 //TODO Together:
@@ -345,6 +366,9 @@ console.log("hello from conditionals lec.js!");
 //     case "cheese":
 //         alert("Just plain cheese? Okay...");
 //         break;
+//     case "ham" :
+//         alert("ham is nice and easy to spell.")
+//         break;
 //     default:
 //         alert(pizzaPreference + " isn't my favorite, but let's order some!");
 //         break;
@@ -353,10 +377,46 @@ console.log("hello from conditionals lec.js!");
 
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
 
+// var weather = "sunny"
+//
+// switch(weather) {
+//     case "rainy" :
+//         alert("it's raining");
+//         break;
+//     case "sunny" :
+//         alert("it's sunny");
+//         break;
+//     case "snow" :
+//         alert("it's snowing");
+//         break;
+//     default:
+//         alert("have a nice day");
+//         break;
+// }
+// console.log(weather)
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
 
-
+// function checkWeather(weather) {
+//     var weatherMessage;
+//
+//     switch (weather) {
+//         case "rainy" :
+//             weatherMessage = "it's raining";
+//             break;
+//         case "sunny" :
+//             weatherMessage = "it's sunny";
+//             break;
+//         case "snow" :
+//             weatherMessage = "it's snowing";
+//             break;
+//         default :
+//             weatherMessage = "have a nice day";
+//             break;
+//     }
+//     return weatherMessage;
+// }
+// console.log(checkWeather("sunny"));
 
 // ================ REVERSE ENGINEERING =================
 // Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output
@@ -365,8 +425,17 @@ console.log("hello from conditionals lec.js!");
 // 1) https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html
 
 
+// if shoppingDone === true : childEarns = 10
+// else childEarns =5
+
+
 // 2) https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html
 
+// if "sunny" message = "it's nice and sunny outside today. wear shorts! go to the beach, or the park, or get an ice cream."
+// else if "rainy" message = "rain is falling outside; take a raincoat and a brolly, and dont stay out for too long."
+// else if "snowing" message ="the snow is coming down - it is freezing! best to stay in with a cup of hot chocolate, or go build a snowman"
+// else "overcast" message = "it isn't raining, but the sky is grey gloomy; it could turn any minute, so take a rain coat just in case."
 
 // 3) https://mdn.github.io/learning-area/javascript/building-blocks/simple-ternary.html
 
+// (theme === "white") ? set bg color = white : set bg color = black;
