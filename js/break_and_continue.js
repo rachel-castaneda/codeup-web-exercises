@@ -1,19 +1,16 @@
+"use strict";
 
-// for(i =1; i <=50; i++) {
-//     var i = prompt("enter an odd number between 1 and 50:");
-//     if(i %2===0) {
-//         console.log("the number entered is not odd");
-//         break;
-//     } else if (i <1) {
-//         console.log("the number entered is less than 1");
-//         break;
-//     } else if (i >50) {
-//         console.log("the number entered is greater than 50");
+// do {
+//     var userNumber = Number(prompt("enter an odd number between 1 and 50"));
+//
+//     if (userNumber %2 ===0) {
+//         alert(userNumber + " is not odd, please pick again")
+//     } else if (userNumber < 1 || userNumber > 50) {
+//         alert(userNumber + " is not between 1 and 50, please pick again");
+//     } else if (isNaN(userNumber)) {
+//         alert(userNumber + " is not a number, please pick again");
+//     } else {
+//         alert("congrats you picked the right number");
 //         break;
 //     }
-// }
-
-// var i;
-// while(i >=1 && i <=50){
-//     console.log(i)
-// }
+// } while (true)
