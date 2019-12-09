@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-    // var names = ["courtney", "david", "matt", "damian"]
+    var names = ["courtney", "david", "matt", "damian"]
 
     /**
      * TODO:
@@ -15,7 +15,7 @@
      * array.
      */
 
-    // console.log(names.length)
+    console.log(names.length)
 
     /**
      * TODO:
@@ -23,7 +23,7 @@
      * accessing each element's index.
      */
 
-    // console.log(names)
+    console.log(names)
 
     /**
      * TODO:
@@ -31,18 +31,18 @@
      * array.
      */
 
-    // for (var i = 0; i < names.length; i++) {
-    //     console.log(names[i])
-    // }
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i])
+    }
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
 
-    // names.forEach(function (names, i, arr) {
-    //     console.log(names)
-    // })
+    names.forEach(function (names, i, arr) {
+        console.log(names)
+    })
 
 
     /**
@@ -74,8 +74,4 @@
     }
     console.log(last(numbers))
 
-    // function arrayLastItem(numbers) {
-    //     return numbers.indexOf([0]);
-    // }
-    //     console.log(arrayLastItem());
 })();
