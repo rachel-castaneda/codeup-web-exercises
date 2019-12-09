@@ -13,7 +13,7 @@
 //     }
 // }
 
-var i;
-while(i >=1 && i <=50){
-    console.log(i)
-}
+// var i;
+// while(i >=1 && i <=50){
+//     console.log(i)
+// }
