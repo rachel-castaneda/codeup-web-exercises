@@ -38,15 +38,12 @@
 // 88888888
 // 999999999
 
-for(var i =  1; i < 10; i++) {
-    console.log(i.toString().repeat(i));
-}
+// for(var i =  1; i < 10; i++) {
+//     console.log(i.toString().repeat(i));
+// }
 
-// for(var i = 5; i <= 100; i++) {
-//     if (i %5===0) {
+// for(var i = 100; i >= 5; i-=5) {
 //         console.log(i);
-//     }
-//
 // }
 
 
