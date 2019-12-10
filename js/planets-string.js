@@ -11,7 +11,7 @@
      * console.log planetsArray to check your work
      */
 
-    var planetsArray = planetsString.split(" ")
+    planetsArray = planetsString.split(" | ")
     console.log(planetsArray);
 
     /**
@@ -25,7 +25,15 @@
      * string, and <li> tags around each planet.
      */
 
-    planetsString.join("<br>")
-    console.log(planetsString)
+    planetsString = planetsArray.join("<br>");
+    console.log(planetsString);
+
+    var planetsUl = "<ul>";
+    planetsArray.forEach(function (planet) {
+        planetsUl += "<li>" + planet + "</li>";
+    })
+    planetsUl += "</ul>"
+    console.log(planetsUl)
+    document.getElementById("planets").innerHTML = planetsUl;
 
 })();
