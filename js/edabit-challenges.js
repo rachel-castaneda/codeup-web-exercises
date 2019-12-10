@@ -187,31 +187,38 @@ function hasSpaces(str) {
 
 // 33. function that checks if an array includes a specific value
 function check(arr, el) {
-    return arr.includes(el)
-}
+    // return arr.includes(el)
+// }
 
 
 // 34. function that takes in a base number and an exponent and returns the calculation
-function calculateExponent(num, exp) {
+// function calculateExponent(num, exp) {
     // return num**exp
-}
+// }
 
 // 35. function that takes in a number as an argument and adds up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
-function addUp(num) {
-    var total = 0;
-    for (var i = 1; i <= num; i++) {
-        total += i;
-    }
-    return total;
-}
+// function addUp(num) {
+    // var total = 0;
+    // for (var i = 1; i <= num; i++) {
+        // total += i;
+    // }
+    // return total;
+// }
 
 // 36. function that determines if the word given is plural
-function isPlural(word) {
-    return word.endsWith("s")
+// function isPlural(word) {
+    // return word.endsWith("s")
+// }
+
+// 37. function that multiplies a number by the length of the array
+// function arrayOfMultiples (num, length) {
+    // var result = []
+    // for (let i = 1; i <= length; i++) {
+    //     result.push(num*i)
+
+    // }
+    // return result
 }
-
-// 37.
-
 
 // 38.
 
