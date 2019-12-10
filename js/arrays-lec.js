@@ -41,10 +41,10 @@
 
     //pop, push, shift, unshift//
 
-var dogs = ['toby', 'gus', 'bullet', 'duncan'];
-console.log(dogs);
+// var dogs = ['toby', 'gus', 'bullet', 'duncan'];
+// console.log(dogs);
 // dogs.indexOf('toby')
-console.log(dogs.indexOf('toby'))
+// console.log(dogs.indexOf('toby'))
 // dogs.push('lucky')
 // console.log(dogs)
 // dogs.pop()
