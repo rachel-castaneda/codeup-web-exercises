@@ -190,15 +190,13 @@ function check(arr, el) {
     return arr.includes(el)
 }
 
-<<<<<<< HEAD
+
 // 34. function that takes in a base number and an exponent and returns the calculation
 function calculateExponent(num, exp) {
     // return num**exp
 }
 
-// 35.
-=======
-// 34. function that takes in a number as an argument and adds up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+// 35. function that takes in a number as an argument and adds up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
 function addUp(num) {
     var total = 0;
     for (var i = 1; i <= num; i++) {
@@ -206,15 +204,11 @@ function addUp(num) {
     }
     return total;
 }
->>>>>>> 60032f6f3118ff8e049cb969fdc3e11e9023bcdc
 
-// 35. function that determines if the word given is plural
+// 36. function that determines if the word given is plural
 function isPlural(word) {
     return word.endsWith("s")
 }
-
-// 36.
-
 
 // 37.
 
@@ -256,3 +250,6 @@ function isPlural(word) {
 
 
 // 50.
+
+
+// 51.
