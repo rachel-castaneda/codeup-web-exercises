@@ -177,7 +177,7 @@ function numArgs() {
 
 // 31. function that takes integer minutes and returns the value in seconds
 function convert(minutes) {
-    return parseInt(minutes * 60)
+    // return parseInt(minutes * 60)
 }
 
 // 32. function that returns true if the string includes spaces
@@ -190,8 +190,10 @@ function check(arr, el) {
     return arr.includes(el)
 }
 
-// 34.
-
+// 34. function that takes in a base number and an exponent and returns the calculation
+function calculateExponent(num, exp) {
+    // return num**exp
+}
 
 // 35.
 
