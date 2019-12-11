@@ -220,11 +220,23 @@ function check(arr, el) {
     // return result
 }
 
-// 38.
+// 38. function that takes in a parameter and return "int" if that parameter is an integer, or returns "str" if that parameter is a string
+function intOrString(param) {
+    if (typeof param === "number") {
+        return "int"
+    } else if (typeof param === "string"){
+        return "str"
+    }
+}
 
+// 39. function to convert integer to a string and a string to an integer
+function toInt(str) {
+    return Number(str)
+}
 
-// 39.
-
+function toStr(int) {
+    return int.toString()
+}
 
 // 40.
 
