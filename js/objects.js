@@ -14,18 +14,10 @@
 
     // var person = {
     //     firstName: 'Rachel',
-    //     lastName: 'Castaneda',
-    //     sayHello : function () {
-    //         if (this.firstName.includes(name)){
-    //             console.log(person.sayHello())
-    //         } else {
-    //             console.log('not a name');
-    //         }
-    //     }
+    //     lastName: 'Castaneda'
     // }
     // console.log(person.firstName)
     // console.log(person.lastName)
-    // console.log(person.sayHello())
 
     /**
      * TODO:
@@ -37,10 +29,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    // person = {
-    //     sayHello: 'Hello, '+ person.firstName + " " + person.lastName + '!'
+    // person.sayHello = function (){
+    //     return "hello from " + this.firstName + " " + this.lastName + "!";
     // }
     // console.log(person.sayHello())
+
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
      * more than $200. If a shopper spends more than $200, they get a 12%
@@ -55,28 +48,20 @@
      * and console.log the relevant messages for each person
      */
 
-    // function offer(amount) {
-    //     if (amount <= 200) {
-    //         console.log('sorry, no discount for you. buy more to receive offer');
-    //     } else if (amount > 200) {
-    //         console.log('thank you for shopping!')
-    //     }
-    // }
-    // console.log(offer(200));
-    // console.log(offer(380));
-
-    // var discount; //amount*0.12
-    // var amountAfter; //= amount - discount
-    // var sorryMessage = 'sorry, ' + name + ", no discount for you"
-    // var discountMessage = 'congrats, ' + name + ', you received a discount of: ' + discount + 'and your total after discount is: ' + amountAfter + '!'
     // var shoppers = [
-    //     {name: 'Cameron', amount: 180, offer: function () {console.log(sorryMessage)}},
-    //     {name: 'Ryan', amount: 250, offer: function () {console.log(discountMessage)}},
-    //     {name: 'George', amount: 320, offer: function () {console.log(discountMessage)}}
+    //     {name: 'Cameron', amount: 180},
+    //     {name: 'Ryan', amount: 250},
+    //     {name: 'George', amount: 320}
     //
     // ];
-    // shoppers.forEach(function (shopper) { shopper.offer() })
-    //
+    // shoppers.forEach(function (shopper) {
+    //     var discount = 0;
+    //     if (shopper.amount > 200)
+    //         discount = shopper.amount * .12;
+    //     var total = shopper.amount - discount;
+    //     console.log(shopper.name + "'s total was $" + shopper.amount + ". They received a discount of $" + discount + " and their total was $" + total + ".")
+    // });
+
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -89,48 +74,51 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
-    // var book = new Object()
+
     // var books = [
-    //     book,
     //     {
-                // book #1 //
-    //         title: 'The Great Gatsby',
-    //         author : new Object(),
-    //             firstName: 'F. Scott',
-    //             lastName: 'Fitzgerald',
-    //     },
-    //     {
-                // book #2 //
-    //         title: 'A Study in Scarlet',
-    //         author: new Object(),
-    //                 firstName: 'Arthur Conan',
-    //                 lastName: 'Doyle',
-    //     },
-    //     {
-                // book #3 //
-    //         title: 'Night',
-    //         author: new Object(),
-    //                 firstName: 'Elie',
-    //                 lastName: 'Wiesel',
-    //     },
-    //     {
-                // book #4 //
-    //         title: 'The Count of Monte Cristo',
-    //         author: new Object(),
-    //                 firstName: 'Alexandre',
-    //                 lastName: 'Dumas',
-    //     },
-    //     {
-                // book #5 //
-    //         title: 'The Things They Carried',
-    //         author: new Object(),
-    //                 firstName: 'Tim',
-    //                 lastName: "O'Brien",
-    //     }
+    //             book #1 //
+            // title: 'The Great Gatsby',
+            // author : [{firstName: 'F. Scott', lastName: 'Fitzgerald',}]
+        // },
+        // {
+        //         book #2 //
+            // title: 'A Study in Scarlet',
+            // author : [{firstName: 'Arthur Conan', lastName: 'Doyle',}]
+        // },
+        // {
+        //         book #3 //
+            // title: 'Night',
+            // author : [{firstName: 'Elie', lastName: 'Wiesel',}]
+        // },
+        // {
+        //         book #4 //
+            // title: 'The Count of Monte Cristo',
+            // author : [{firstName: 'Alexandre', lastName: 'Dumas',}]
+        // },
+        // {
+        //         book #5 //
+            // title: 'The Things They Carried',
+            // author : [{firstName: 'Tim', lastName: "O'Brien",}]
+        // }
     // ]
     // books.forEach(function (book) {
-    //     console.log(book.title + 'is a great book by: ' + book.author.firstName + ' ' + book.author.lastName + " .")
+        // console.log(book.title + 'is a great book by: ' + books.author[0] + ' ' + books.author[0] + " .")
     // })
+    // console.log(books[0].title)
+    // console.log(books[0].author[0])
+    //
+    // console.log(books[1].title)
+    // console.log(books[0].author[1])
+    //
+    // console.log(books[2].title)
+    // console.log(books[2].author[2])
+    //
+    // console.log(books[3].title)
+    // console.log(books[3].author[3])
+    //
+    // console.log(books[4].title)
+    // console.log(books[4].author[4])
 
     /**
      * TODO:
