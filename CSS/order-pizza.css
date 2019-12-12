@@ -3,7 +3,7 @@
     margin-left: 0;
 }
 #main-jumbotron {
-    background-image:url("img/pizza.png");
+    background-image:url("../img/pizza.png");
     background-size: cover;
     background-position: center;
     height: 50vh;
