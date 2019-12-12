@@ -75,50 +75,40 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-    // var books = [
-    //     {
-    //             book #1 //
-            // title: 'The Great Gatsby',
-            // author : [{firstName: 'F. Scott', lastName: 'Fitzgerald',}]
-        // },
-        // {
-        //         book #2 //
-            // title: 'A Study in Scarlet',
-            // author : [{firstName: 'Arthur Conan', lastName: 'Doyle',}]
-        // },
-        // {
-        //         book #3 //
-            // title: 'Night',
-            // author : [{firstName: 'Elie', lastName: 'Wiesel',}]
-        // },
-        // {
+    var books = [
+        {
+                // book #1 //
+            title: 'The Great Gatsby',
+            author : {firstName: 'F. Scott', lastName: 'Fitzgerald',}
+        },
+        {
+                // book #2 //
+            title: 'A Study in Scarlet',
+            author : {firstName: 'Sir Arthur Conan', lastName: 'Doyle',}
+        },
+        {
+                // book #3 //
+            title: 'Night',
+            author : {firstName: 'Elie', lastName: 'Wiesel',}
+        },
+        {
         //         book #4 //
-            // title: 'The Count of Monte Cristo',
-            // author : [{firstName: 'Alexandre', lastName: 'Dumas',}]
-        // },
-        // {
+            title: 'The Count of Monte Cristo',
+            author : {firstName: 'Alexandre', lastName: 'Dumas',}
+        },
+        {
         //         book #5 //
-            // title: 'The Things They Carried',
-            // author : [{firstName: 'Tim', lastName: "O'Brien",}]
-        // }
-    // ]
+            title: 'The Things They Carried',
+            author : {firstName: 'Tim', lastName: "O'Brien",}
+        }
+    ];
+    // for (var i =0; i<=5; i++) {
+    //     console.log(books[i].title " " + books[i].author.firstName + " " + books[i].author.lastName)
+    // }
     // books.forEach(function (book) {
-        // console.log(book.title + 'is a great book by: ' + books.author[0] + ' ' + books.author[0] + " .")
+    //     console.log(book.title + 'is a great book by: ' + books.author[0] + ' ' + books.author[0] + " .")
     // })
-    // console.log(books[0].title)
-    // console.log(books[0].author[0])
-    //
-    // console.log(books[1].title)
-    // console.log(books[0].author[1])
-    //
-    // console.log(books[2].title)
-    // console.log(books[2].author[2])
-    //
-    // console.log(books[3].title)
-    // console.log(books[3].author[3])
-    //
-    // console.log(books[4].title)
-    // console.log(books[4].author[4])
+
 
     /**
      * TODO:
@@ -145,9 +135,12 @@
      *      ...
      */
 
-    for (var i= 0; i< 20; i++) {
-        console.log(Math.floor(Math.random()*100))
-    }
+    // books.forEach(function (book, i) {
+    //     console.log("Book # " +(i+1))
+    //     console.log("Title: " + book.title)
+    //     console.log("Author: " + book.author.firstName + " " +book.author.lastName)
+    //     console.log("---")
+    // })
 
     /**
      * Bonus:
@@ -159,5 +152,32 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    var createBook = function(title, authorFirstName, authorLastName) {
+        var book = {};
+        book.title = title;
+        book.author = {};
+        book.author.firstName = authorFirstName;
+        book.author.lastName = authorLastName;
+        return book;
+    }
+
+    books.push(createBook('Catcher in the Rye', 'J.D', 'Salinger'))
+
+    var showBookInfo = function (book, i) {
+        console.log("Book # " +(i+1))
+        console.log("Title: " + book.title)
+        console.log("Author: " + book.author.firstName + " " +book.author.lastName)
+        console.log("---")
+    }
+
+    books.forEach(showBookInfo);
+        // console.log("Book # " +(i+1))
+        // console.log("Title: " + book.title)
+        // console.log("Author: " + book.author.firstName + " " +book.author.lastName)
+        // console.log("---")
+
+
+
 
 })();
