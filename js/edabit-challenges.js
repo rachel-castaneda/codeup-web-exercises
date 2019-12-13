@@ -238,11 +238,21 @@ function toStr(int) {
     return int.toString()
 }
 
-// 40.
-
+// 40. function that takes in two functions and returns a string declaring which function returned the larger number, and return neither if they're equal.
+function whichIsLarger(f, g) {
+    if (f() > g()) {
+        return "f"
+    } else if (g() > f()) {
+        return "g"
+    } else {
+        return "neither"
+    }
+}
 
 // 41.
-
+function redundant(str) {
+    return () => str;
+}
 
 // 42.
 
