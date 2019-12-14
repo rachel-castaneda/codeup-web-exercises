@@ -250,12 +250,14 @@ function whichIsLarger(f, g) {
 }
 
 // 41.
-function redundant(str) {
-    return () => str;
+// function redundant(str) {
+//     return () => str;
+// }
+
+// 42. function to find the volume of a pizza and round the result
+function volPizza(radius, height) {
+    return Math.round(Math.pow(radius, 2) * height * Math.PI);
 }
-
-// 42.
-
 
 // 43.
 
