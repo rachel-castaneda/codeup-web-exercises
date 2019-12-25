@@ -259,8 +259,10 @@ function volPizza(radius, height) {
     return Math.round(Math.pow(radius, 2) * height * Math.PI);
 }
 
-// 43.
-
+// 43. return true if the values input are evenly divisible
+function dividesEvenly(a, b) {
+    return a % b == 0
+}
 
 // 44.
 
