@@ -264,8 +264,11 @@ function dividesEvenly(a, b) {
     return a % b == 0
 }
 
-// 44.
-
+// 44. find out whether the lamp is on or off.
+function lampStatus(){
+    var lamp;
+    return lamp == 'on';
+}
 
 // 45.
 
