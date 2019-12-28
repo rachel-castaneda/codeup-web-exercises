@@ -270,8 +270,13 @@ function lampStatus(){
     return lamp == 'on';
 }
 
-// 45.
-
+// 45. Create a function that takes an object as an argument and returns a string with facts about the city.
+function cityFacts(city) {
+    var name = city.name;
+    var population = city.population;
+    var continent = city.continent;
+    return name + ' has a population of ' + population + ' and is situated in ' + continent;
+}
 
 // 46.
 
