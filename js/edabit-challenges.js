@@ -278,8 +278,10 @@ function cityFacts(city) {
     return name + ' has a population of ' + population + ' and is situated in ' + continent;
 }
 
-// 46.
-
+// 46. Create a function that takes a number (step) as an argument and returns the amount of matchsticks in that step.
+function matchHouses(step) {
+    return step === 0 ? 0 : 5 * step + 1;
+}
 
 // 47.
 
