@@ -5,45 +5,33 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kulim+Park|Noto+Sans+JP&display=swap" rel="stylesheet">
     <title>jQuery exercises</title>
     <style>
-        .cyan {
-            background-color: cyan;
-        }
         .newFont {
             font-family: 'Kulim Park', sans-serif;
         }
-        .rounded {
-            border-radius: 20%;
+        .otherFont {
+            font-family: 'Noto Sans JP', sans-serif;
         }
-        .under {
-            text-decoration: underline;
-        }
-        .grayOdd {
-            background-color: rgba(64,64,64,0.86);
-        }
-        .otherGray {
-            background-color: white;
-        }
-        .border {
-            border: 3px solid black;
-        }
+        /*.codeup {*/
+        /*    border: 1px solid red;*/
+        /*}*/
     </style>
 </head>
 <body>
-<h1>jQuery</h1>
 
-<h3>Happy New Year!</h3>
-<ul id="resolutions">
-    <li class="odd">this</li>
-    <li class="even">that</li>
-    <li class="odd">and</li>
-    <li class="even">the</li>
-    <li class="odd">other</li>
+<h1 id="title" class="codeup">Happy New Year!</h1>
+<ul id="resolutions" class="resList">
+    <li id="li1" class="odd">this</li>
+    <li id="li2" class="even">that</li>
+    <li id="li3" class="odd">and</li>
+    <li id="li4" class="even">the</li>
+    <li id="li5" class="odd">other</li>
 </ul>
+<p id="intro" class="codeup">Welcome to 2020, hope you have a good year! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consectetur doloribus laborum nostrum nulla quisquam? Assumenda doloremque exercitationem molestiae necessitatibus?</p>
 <form action="" name="resForm">
-    <div>
+    <div id="form" class="codeup">
         <label for="goal">what do you want to do this year?</label>
         <input id="goal" name="goal" type="text">
     </div>
@@ -61,14 +49,21 @@
 
         })
         $("#button").click(function () {
-            alert("you clicked the button")
+            console.log('clicked');
         })
-        $("#button").addClass('rounded');
-        $("li").addClass('newFont');
-        $('h3').addClass('under');
-        $('.odd').addClass('grayOdd')
-        $('.even').addClass('otherGray')
-        $('*').addClass('border')
+        // $("#title").addClass('newFont');
+        // $('li').addClass('otherFont');
+        // $('.codeup').css('border', '1px solid red')
+        $('li').css('font-size', '20px');
+        $('h1, p, li').css('background-color', 'yellow');
+        $('h1').ready(function () {
+            alert('this is a header')
+        })
+
+
+
+
+
 
     })();
 </script>
