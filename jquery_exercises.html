@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Kulim+Park&display=swap" rel="stylesheet">
+    <title>jQuery exercises</title>
+    <style>
+        .cyan {
+            background-color: cyan;
+        }
+        .newFont {
+            font-family: 'Kulim Park', sans-serif;
+        }
+        .rounded {
+            border-radius: 20%;
+        }
+        .under {
+            text-decoration: underline;
+        }
+        .grayOdd {
+            background-color: rgba(64,64,64,0.86);
+        }
+        .otherGray {
+            background-color: white;
+        }
+        .border {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+<h1>jQuery</h1>
+
+<h3>Happy New Year!</h3>
+<ul id="resolutions">
+    <li class="odd">this</li>
+    <li class="even">that</li>
+    <li class="odd">and</li>
+    <li class="even">the</li>
+    <li class="odd">other</li>
+</ul>
+<form action="" name="resForm">
+    <div>
+        <label for="goal">what do you want to do this year?</label>
+        <input id="goal" name="goal" type="text">
+    </div>
+</form>
+<button id="button" class="cyan">Click Me!</button>
+<script src="/js/jquery.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        "use strict";
+        $(document).ready(function () {
+            // alert ("We're using jQuery!");
+            console.log($);
+            console.log(jQuery);
+
+        })
+        $("#button").click(function () {
+            alert("you clicked the button")
+        })
+        $("#button").addClass('rounded');
+        $("li").addClass('newFont');
+        $('h3').addClass('under');
+        $('.odd').addClass('grayOdd')
+        $('.even').addClass('otherGray')
+        $('*').addClass('border')
+
+    })();
+</script>
+
+</body>
+</html>
