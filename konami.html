@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+    <title>Konami Code</title>
+    <style>
+        body {
+            background-image: url("https://theconservativehistoricalreview.files.wordpress.com/2019/01/game-over.png?w=1920");
+            background-size: cover;
+        }
+        .activatedCheat {
+            background-image: url("http://getwallpapers.com/wallpaper/full/e/f/9/1079593-download-free-contra-wallpaper-1920x1080-windows-10.jpg");
+            background-size: cover;
+        }
+        .pacman {
+            background-image: url("img/pac-man-wallpaper.png");
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+<!-----jquery script--->
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous">
+</script>
+<!-----cheat code---->
+<script>
+    "use strict";
+
+    // variable to establish the keys in the sequence //
+    var allowedKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down',
+        65: 'a',
+        66: 'b'
+
+    };
+    //pacman cheat code: up, up, up, down, down, down, left, right, left, right, left//
+    var pacmanCode  = ['up', 'up', 'up','down', 'down', 'down', 'left', 'right', 'left', 'right', 'left'];
+    var pacmanPosition = 0;
+    // KONAMI sequence: up, up, down, down, left, right, left, right, b, a //
+    var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+    // keeps track of the users 'position' so far //
+    var konamiPosition = 0;
+    // add event listener //
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+        //get value of keycode from keymap//
+        var key = allowedKeys[event.keyCode];
+        //get value of required key from konami code//
+        var requiredKey = konamiCode[konamiPosition] || pacmanCode[pacmanPosition]
+        // var pacmanKey = pacmanCode[pacmanPosition]
+            // compare key with required key//
+        if(key === requiredKey || pacmanKey) {
+            //move to next key in sequence//
+            konamiPosition++ || pacmanPosition++;
+            //if last key is reached activate cheat//
+            if (konamiPosition == konamiCode.length){
+                activateKonamiCheats();
+                $('body').addClass('activatedCheat')
+                konamiPosition = 0;
+            } else if (key === pacmanKey) {
+                pacmanPosition++;
+                if (pacmanPosition == pacmanCode.length) {
+                    activatePacmanCheats();
+                    $('body').addClass('pacman')
+                    pacmanPosition = 0;
+                }
+            }
+        } else {
+            konamiPosition = 0;
+            pacmanPosition = 0;
+        }
+    });
+    function activateKonamiCheats(){
+        var audio = new Audio('audio/contra-theme.mp3');
+        audio.play();
+    }
+    function activatePacmanCheats() {
+        // var audio = new Audio('audio/contra-theme.mp3');
+        // audio.play();
+    }
+</script>
+
+</body>
+</html>

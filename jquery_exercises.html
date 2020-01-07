@@ -8,15 +8,15 @@
     <link href="https://fonts.googleapis.com/css?family=Kulim+Park|Noto+Sans+JP&display=swap" rel="stylesheet">
     <title>jQuery exercises</title>
     <style>
-        .newFont {
-            font-family: 'Kulim Park', sans-serif;
-        }
-        .otherFont {
-            font-family: 'Noto Sans JP', sans-serif;
-        }
-        .greenText {
-            color: green;
-        }
+        /*.newFont {*/
+        /*    font-family: 'Kulim Park', sans-serif;*/
+        /*}*/
+        /*.otherFont {*/
+        /*    font-family: 'Noto Sans JP', sans-serif;*/
+        /*}*/
+        /*.greenText {*/
+        /*    color: green;*/
+        /*}*/
         /*.codeup {*/
         /*    border: 1px solid red;*/
         /*}*/
@@ -40,26 +40,37 @@
     </div>
 </form>
 <button id="button" class="cyan">Click Me!</button>
-<script src="/js/jquery-2.2.4.js"></script>
-<script
-        src="https://code.jquery.com/jquery-2.2.4.js"
-        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-        crossorigin="anonymous"></script>
+<!--<script src="/js/jquery-2.2.4.js"></script>-->
+<!--<script src="/js/jquery.js"></script>-->
+<!--<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>-->
+<!--<script-->
+<!--        src="https://code.jquery.com/jquery-2.2.4.js"-->
+<!--        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+<!--        crossorigin="anonymous">
+</script>-->
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script>
     (function () {
        "use strict";
         $(document).ready(function () {
 
-            $('h1').click(function () {$('this').css('background-color', 'light-blue')})
-            $('p').dblclick(function () {$('this').css('font-size', '18px')})
+  //mouse events exercise//
+            $('h1').click(function () {
+                $(this).css('background-color', blue');
+            });
+            $('p').dblclick(function () {
+                $(this).css('font-size', '18px');
+            });
             $('li').hover(
                 function () {
-                    $('this').css('color', 'red')
+                    $('li').css('color', 'red')
                 },
                 function () {
-                    $('this').css('color', 'black')
+                    $('li').css('color', 'black')
                 }
             );
+
+   //jquery exercise//
         //     // alert ($("#button").html());
         //     // alert ($("#resolutions").html());
         //     // $('.codeup').css('border', '1px solid red');
