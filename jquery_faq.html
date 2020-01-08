@@ -11,11 +11,48 @@
         .invisible {
             visibility: hidden;
         }
+        /*#frame-container{*/
+        /*    display: flex;*/
+        /*    justify-content: center;*/
+        /*}*/
+        #first {
+            display: inline-block;
+            /*align-content: center;*/
+            height: 400px;
+            width: 300px;
+            background-image: url("https://images.pexels.com/photos/3234167/pexels-photo-3234167.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+        }
+        #second {
+            display: inline-block;
+            /*align-content: center;*/
+            height: 400px;
+            width: 300px;
+            background-image: url("https://images.pexels.com/photos/3224232/pexels-photo-3224232.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+        }
+        #third {
+            display: inline-block;
+            /*align-content: center;*/
+            height: 400px;
+            width: 300px;
+            background-image: url("https://images.pexels.com/photos/3361480/pexels-photo-3361480.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+        }
+        #hide-div {
+            /*visibility: hidden;*/
+        }
+        /*.hide-facts1 {*/
+        /*    display: none;*/
+        /*}*/
     </style>
 
 </head>
 <body>
 
+<div id="hide-div">
+    <h1>Would you like to sign up for our newsletter?<span id="hide-x">x</span></h1>
+</div>
+<div id="register-div">
+    <h2 id="register">Would you like to register?</h2>
+</div>
 <dl>
     <dt>Hey</dt>
     <dd class="invisible">Lorem ipsum dolor sit.</dd>
@@ -35,22 +72,94 @@
     <dt>You're Welcome</dt>
     <dd class="invisible">Lorem ipsum dolor sit.</dd>
 </dl>
-
 <button id="styler">CLICK</button>
-<script
-        src="https://code.jquery.com/jquery-2.2.4.js"
-        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-        crossorigin="anonymous">
-</script>
-<script>
+<ul>
+    <h3 class="show-me-facts">Enchanted Rock</h3>
+    <ul>
+        <li class="hide-facts1">Hold on,  </li>
+        <li class="hide-facts1">hold on, </li>
+        <li class="hide-facts1">hold on. </li>
+        <li class="hide-facts1">You're gon- HOLD ON.</li>
+    </ul>
+</ul>
+<ul>
 
-    $('styler').click(function (e) {
+    <h3 class="show-me-facts">Lost Maples</h3>
+    <ul>
+        <li class="hide-facts1">Her sister was a witch, right? and what was her sister?</li>
+        <li class="hide-facts1">A princess, the wicked witch of the east bro. </li>
+        <li class="hide-facts1">You're gonna look at me and you're gonna tell me that i'm WRONG!?!? </li>
+        <li class="hide-facts1">AM I WRONG!?!?</li>
+    </ul>
+</ul>
+<ul>
+    <h3 class="show-me-facts">Big Bend</h3>
+    <ul>
+        <li class="hide-facts1">She wore a crown</li>
+        <li class="hide-facts1">and she came down in a bubble dawg!</li>
+        <li class="hide-facts1">Grow up BRO! grow up!</li>
+        <li class="hide-facts1">Get educated.</li>
+    </ul>
+</ul>
+
+<button id="yellow">CLICK TO SEE YELLOW</button>
+<div id="frame-container">
+<div id="first"></div>
+<button>swap</button>
+
+<div id="second"></div>
+<button>swap</button>
+
+<div id="third"></div>
+<button>swap</button>
+</div>
+
+<script src="js/jquery-2.js"></script>
+<!--<script>-->
+<!--        src="https://code.jquery.com/jquery-2.2.4.min.js"-->
+<!--        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
+<!--        crossorigin="anonymous"-->
+<!--</script>-->
+<script>
+"use strict";
+
+    $('li').css('display', 'none')
+
+    $('h2').hide();
+    setTimeout(function () {
+        $('h2').fadeIn(5000);
+    },8000)
+
+    $('#hide-x').click(function (e) {
+        e.preventDefault();
+        $('#hide-div').toggleClass('invisible');
+    });
+
+    $('h3').click(function () {
+        $(this).next().children().toggle()
+        // $(this).next().css('font-weight', 'bold')
+    })
+
+    $('#styler').click(function (e) {
         e.preventDefault();
         $('dd').toggleClass('invisible');
-    })
+    });
+
     $('dt').click(function () {
         $('this').css('background-color', 'yellow');
-    })
+    });
+
+    $('#yellow').click(function () {
+        $('ul').each(function () {
+            $(this).children().last().css('background-color', 'yellow')
+        })
+    });
+
+    $('li').click(function () {
+        $(this).parent().children().first().css('color', 'blue')
+        // $(this).css('display', 'none')
+    });
+
 
 </script>
 
