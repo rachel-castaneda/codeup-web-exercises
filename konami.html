@@ -58,7 +58,7 @@
         var key = allowedKeys[event.keyCode];
         //get value of required key from konami code//
         var requiredKey = konamiCode[konamiPosition] || pacmanCode[pacmanPosition]
-        // var pacmanKey = pacmanCode[pacmanPosition]
+        var pacmanKey = pacmanCode[pacmanPosition]
             // compare key with required key//
         if(key === requiredKey || pacmanKey) {
             //move to next key in sequence//
@@ -78,7 +78,7 @@
             }
         } else {
             konamiPosition = 0;
-            pacmanPosition = 0;
+            // pacmanPosition = 0;
         }
     });
     function activateKonamiCheats(){

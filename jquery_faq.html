@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery faq</title>
+
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+<body>
+
+<dl>
+    <dt>Hey</dt>
+    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+
+    <dt>This</dt>
+    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+
+    <dt>Is</dt>
+    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+
+    <dt>An</dt>
+    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+
+    <dt>Exercise</dt>
+    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+
+    <dt>You're Welcome</dt>
+    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+</dl>
+
+<button id="styler">CLICK</button>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.js"
+        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+        crossorigin="anonymous">
+</script>
+<script>
+
+    $('styler').click(function (e) {
+        e.preventDefault();
+        $('dd').toggleClass('invisible');
+    })
+    $('dt').click(function () {
+        $('this').css('background-color', 'yellow');
+    })
+
+</script>
+
+</body>
+</html>
