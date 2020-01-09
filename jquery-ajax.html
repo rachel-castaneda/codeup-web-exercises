@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery ajax</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            font-family: 'Source Code Pro', monospace;
+        }
+    </style>
+</head>
+<body>
+<h1>AJAX</h1>
+<script src="js/jquery-2.js"></script>
+<script>
+    "use strict";
+    $(document).ready(function() {
+
+        $.ajax("https://www.potterapi.com/v1/sortingHat")
+            .done(function (resp) {
+                console.log(resp);
+            })
+        $.ajax("https://pokeapi.co/api/v2/pokemon/25/")
+            .done(function (resp) {
+                console.log(resp.name);
+            })
+        $.ajax("http://www.superheroes-idb.tk/characters/id")
+            .done(function (resp) {
+                console.log(resp.name);
+            })
+    });
+
+</script>
+</body>
+</html>
