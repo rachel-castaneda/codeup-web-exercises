@@ -83,26 +83,28 @@
         </div>
     </div>
 </div>
-<dl>
-    <dt>Hey</dt>
-    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+<!--<dl>-->
+<!--    <dt>Hey</dt>-->
+<!--    <dd class="invisible">Lorem ipsum dolor sit.</dd>-->
 
-    <dt>This</dt>
-    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+<!--    <dt>This</dt>-->
+<!--    <dd class="invisible">Lorem ipsum dolor sit.</dd>-->
 
-    <dt>Is</dt>
-    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+<!--    <dt>Is</dt>-->
+<!--    <dd class="invisible">Lorem ipsum dolor sit.</dd>-->
 
-    <dt>An</dt>
-    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+<!--    <dt>An</dt>-->
+<!--    <dd class="invisible">Lorem ipsum dolor sit.</dd>-->
 
-    <dt>Exercise</dt>
-    <dd class="invisible">Lorem ipsum dolor sit.</dd>
+<!--    <dt>Exercise</dt>-->
+<!--    <dd class="invisible">Lorem ipsum dolor sit.</dd>-->
 
-    <dt>You're Welcome</dt>
-    <dd class="invisible">Lorem ipsum dolor sit.</dd>
-</dl>
-<button id="styler">CLICK</button>
+<!--    <dt>You're Welcome</dt>-->
+<!--    <dd class="invisible">Lorem ipsum dolor sit.</dd>-->
+<!--</dl>-->
+<!--<div>-->
+<!--<button id="styler">CLICK</button>-->
+<!--</div>-->
 <ul>
     <h3 class="show-me-facts">Enchanted Rock</h3>
     <ul>
@@ -131,25 +133,21 @@
         <li class="hide-facts1">Get educated.</li>
     </ul>
 </ul>
-
+<div>
 <button id="yellow">CLICK TO SEE YELLOW</button>
-<div id="frame-container">
-<div id="first"></div>
-<button>swap</button>
-
-<div id="second"></div>
-<button>swap</button>
-
-<div id="third"></div>
-<button>swap</button>
 </div>
+<!--<div id="frame-container">-->
+<!--<div id="first"></div>-->
+<!--<button>swap</button>-->
+
+<!--<div id="second"></div>-->
+<!--<button>swap</button>-->
+
+<!--<div id="third"></div>-->
+<!--<button>swap</button>-->
+<!--</div>-->
 
 <script src="js/jquery-2.js"></script>
-<!--<script>-->
-<!--        src="https://code.jquery.com/jquery-2.2.4.min.js"-->
-<!--        integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="-->
-<!--        crossorigin="anonymous"-->
-<!--</script>-->
 <script>
 "use strict";
 
@@ -166,7 +164,8 @@
     });
 
     $('h3').click(function () {
-        $(this).next().children().toggle()
+        $(this).next().children().toggle();
+        // $(this).next().slideToggle();
         // $(this).next().css('font-weight', 'bold')
     })
 
