@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <title>weather map project</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--    <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Changa|El+Messiri|Ruda&display=swap" rel="stylesheet">
     <style>
         h1 {
             text-align: center;
+            font-family: 'Changa', sans-serif;
+            margin-top: 1em;
+
+        }
+        h2 {
+            font-family: 'Ruda', sans-serif;
         }
         li {
             list-style: none;
@@ -19,38 +27,48 @@
 </head>
 <body>
 
-<h1>Weather Map</h1>
+<!-- https://picsum.photos/200 -->
 
-    <div id="weather" class="row"> <!---- weather box cards start --->
+<h1>Weather Map</h1> <!--- page header ---->
+
+    <div id="weather" class="row mt-5"> <!---- weather box cards start --->
+
 
         <div class="card-deck"> <!--- container that aligns cards into a separated deck---->
 
+
             <div class="card weather-main text-center" id="today" style="width: 18rem;"> <!---start of card 1 ---->
 
-                <img src="https://picsum.photos/200" class="card-img-top" alt="..."> <!---icon for card 1--->
+                <img src="https://picsum.photos/200" id="today-img" class="card-img-top" alt="..."> <!---icon for card 1--->
 
                 <div class="card-body weather-content"> <!--content for weather forecast 1--->
+                    <h2>Today's <br>Weather</h2>
                     <ul class="card-text"></ul>
                 </div> <!---- end weather content --->
             </div> <!-- end of first card --->
 
+
             <div class="card weather-main text-center" id="tomorrow" style="width: 18rem;"> <!--- start of card 2 ---->
 
-                <img src="https://picsum.photos/200" class="card-img-top" alt="..."> <!--- icon for card 2 ---->
+                <img src="https://picsum.photos/200" id="tomorrow-img" class="card-img-top" alt="..."> <!--- icon for card 2 ---->
 
                 <div class="card-body weather-content"> <!--- content for weather forecast 2 ---->
+                    <h2>Tomorrow's Weather</h2>
                     <ul class="card-text"></ul>
                 </div> <!--- end weather content --->
             </div> <!--- end second card ---->
 
+
             <div class="card weather-main text-center" id="next-day" style="width: 18rem;"> <!---- start card 3 ---->
 
-                <img src="https://picsum.photos/200" class="card-img-top" alt="..."> <!--- icon for card 3 --->
+                <img src="https://picsum.photos/200" id="next-day-img" class="card-img-top" alt="..."> <!--- icon for card 3 --->
 
                 <div class="card-body weather-content"> <!---- content for weather forecast 3 ---->
+                    <h2>Next Day's Weather</h2>
                     <ul class="card-text"></ul>
                 </div> <!--- end weather content ---->
             </div> <!--- end card 3 ---->
+
 
         </div> <!--- end card deck ---->
 
@@ -62,43 +80,131 @@
 <script>
 
     "use strict";
-   $(document).ready(function () {
+   $(document).ready(function () { // document ready function start //
 
-       $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" +  darkSkyKey + "/29.4241,-98.4936")
-           .done(function (data) {
+       $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" +  darkSkyKey + "/29.4241,-98.4936") //ajax //
 
-               console.log(data);
+           .done(function (data) { // .done function start //
+
+               // method to convert current time into a string //
+               var dateObject = new Date(data.currently.time * 1000);
+               console.log(dateObject.toString());
+
+               console.log(data); // day 1 weather content jquery start //
                   $('#today').append
                       (
-                          "<li></li>" + data.daily.data[0].temperatureLow + " / " + data.daily.data[0].temperatureHigh +
-                          "<li></li>" + data.currently.summary +
-                          "<li></li>" + "Humidity: " + data.currently.humidity +
-                          "<li></li>" + "Wind: " + data.currently.windSpeed +
-                          "<li></li>" + "Pressure: " + data.currently.pressure
-                      )
+                          "<li></li>" + data.daily.data[0].temperatureLow + "°" + " / " + data.daily.data[0].temperatureHigh + "°" +
+                          "<li></li>" + data.daily.data[0].summary +
+                          "<li></li>" + "Humidity: " + data.daily.data[0].humidity +
+                          "<li></li>" + "Wind: " + data.daily.data[0].windSpeed +
+                          "<li></li>" + "Chance of Rain: " + data.daily.data[0].precipProbability
+                      ) // day 1 weather content jquery end //
 
-               console.log(data);
+               console.log(data); // day 2 weather content jquery start //
                $('#tomorrow').append
                (
-                   "<li></li>" + data.daily.data[1].temperatureLow + " / " + data.daily.data[1].temperatureHigh +
+                   "<li></li>" + data.daily.data[1].temperatureLow + "°" + " / " + data.daily.data[1].temperatureHigh + "°" +
                    "<li></li>" + data.daily.data[1].summary +
                    "<li></li>" + "Humidity: " + data.daily.data[1].humidity +
                    "<li></li>" + "Wind: " + data.daily.data[1].windSpeed +
-                   "<li></li>" + "Pressure: " + data.daily.data[1].pressure
-               )
+                   "<li></li>" + "Chance of Rain: " + data.daily.data[1].precipProbability
+               ) // day 2 weather content jquery end //
 
-               console.log(data);
+               console.log(data); // day 3 weather content jquery start //
                $('#next-day').append
                (
-                   "<li></li>" + data.daily.data[2].temperatureLow + " / " + data.daily.data[2].temperatureHigh +
+                   "<li></li>" + data.daily.data[2].temperatureLow + "°" + " / " + data.daily.data[2].temperatureHigh + "°" +
                    "<li></li>" + data.daily.data[2].summary +
                    "<li></li>" + "Humidity: " + data.daily.data[2].humidity +
                    "<li></li>" + "Wind: " + data.daily.data[2].windSpeed +
-                   "<li></li>" + "Pressure: " + data.daily.data[2].pressure
-               )
-            })
+                   "<li></li>" + "Chance of Rain: " + data.daily.data[2].precipProbability
+               ) // day 3 weather content jquery end //
 
-   })
+               $('#today-img').attr("src", iconToday()) // today icon function start //
+               function iconToday() {
+                   for (var i = 0; i < iconArray.length; i++) { // for loop start for day 1 icon //
+
+                       if (data.daily.data[0].icon === iconArray[i].conditions) {
+                           return iconArray[i].icon
+                       }
+
+                   } // for loop end
+
+               } // today icon function end //
+
+               $('#tomorrow-img').attr("src", iconTomorrow()) // tomorrow icon function start //
+               function iconTomorrow() {
+                   for (var i = 0; i < iconArray.length; i++) { // for loop start for day 2 icon //
+
+                       if (data.daily.data[1].icon === iconArray[i].conditions) {
+                           return iconArray[i].icon
+                       }
+
+                   } // for loop end
+
+               }
+
+               $('#next-day-img').attr("src", iconNextDay()) // next day icon function start //
+               function iconNextDay() {
+                   for (var i = 0; i < iconArray.length; i++) { // for loop start for day 3 icon //
+
+                       if (data.daily.data[2].icon === iconArray[i].conditions) {
+                           return iconArray[i].icon
+                       }
+
+                   } // for loop end
+
+               }
+
+           }) // .done function end //
+
+   }) // document ready function end //
+
+
+        var iconArray = [
+            {
+                "conditions": "clear-day",
+                "icon": "icons/climacons-master/SVG/Sun.svg"
+            },
+            {
+                "conditions": "clear-night",
+                "icon": "icons/climacons-master/SVG/Moon.svg"
+            },
+            {
+                "conditions": "rain",
+                "icon": "icons/climacons-master/SVG/Cloud-Rain.svg"
+            },
+            {
+                "conditions": "snow",
+                "icon": "icons/climacons-master/SVG/Cloud-Snow-Alt.svg"
+            },
+            {
+                "conditions": "sleet",
+                "icon": "icons/climacons-master/SVG/Snowflake.svg"
+            },
+            {
+                "conditions": "wind",
+                "icon": "icons/climacons-master/SVG/Wind.svg"
+            },
+            {
+                "conditions": "fog",
+                "icon": "icons/climacons-master/SVG/Cloud-Fog.svg"
+            },
+            {
+                "conditions": "cloudy",
+                "icon": "icons/climacons-master/SVG/Cloud.svg"
+            },
+            {
+                "conditions": "partly-cloudy-day",
+                "icon": "icons/climacons-master/SVG/Cloud-Sun.svg"
+            },
+            {
+                "conditions": "partly-cloudy-night",
+                "icon":"icons/climacons-master/SVG/Cloud-Moon.svg"
+            }
+        ]
+
+
 
 
 </script>
