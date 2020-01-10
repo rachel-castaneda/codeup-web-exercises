@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weather map project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        li {
+            list-style: none;
+        }
+        .row {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Weather Map</h1>
+
+    <div id="weather" class="row"> <!---- weather box cards start --->
+
+        <div class="card-deck"> <!--- container that aligns cards into a separated deck---->
+
+            <div class="card weather-main text-center" id="today" style="width: 18rem;"> <!---start of card 1 ---->
+
+                <img src="https://picsum.photos/200" class="card-img-top" alt="..."> <!---icon for card 1--->
+
+                <div class="card-body weather-content"> <!--content for weather forecast 1--->
+                    <ul class="card-text"></ul>
+                </div> <!---- end weather content --->
+            </div> <!-- end of first card --->
+
+            <div class="card weather-main text-center" id="tomorrow" style="width: 18rem;"> <!--- start of card 2 ---->
+
+                <img src="https://picsum.photos/200" class="card-img-top" alt="..."> <!--- icon for card 2 ---->
+
+                <div class="card-body weather-content"> <!--- content for weather forecast 2 ---->
+                    <ul class="card-text"></ul>
+                </div> <!--- end weather content --->
+            </div> <!--- end second card ---->
+
+            <div class="card weather-main text-center" id="next-day" style="width: 18rem;"> <!---- start card 3 ---->
+
+                <img src="https://picsum.photos/200" class="card-img-top" alt="..."> <!--- icon for card 3 --->
+
+                <div class="card-body weather-content"> <!---- content for weather forecast 3 ---->
+                    <ul class="card-text"></ul>
+                </div> <!--- end weather content ---->
+            </div> <!--- end card 3 ---->
+
+        </div> <!--- end card deck ---->
+
+    </div> <!--- weather box cards container end ---->
+
+<!--Powered by Dark Sky &ndash;&gt; https://darksky.net/poweredby/-->
+<script src="js/keys.js"></script>
+<script src="js/jquery-2.js"></script>
+<script>
+
+    "use strict";
+   $(document).ready(function () {
+
+       $.ajax("https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/" +  darkSkyKey + "/29.4241,-98.4936")
+           .done(function (data) {
+
+               console.log(data);
+                  $('#today').append
+                      (
+                          "<li></li>" + data.daily.data[0].temperatureLow + " / " + data.daily.data[0].temperatureHigh +
+                          "<li></li>" + data.currently.summary +
+                          "<li></li>" + "Humidity: " + data.currently.humidity +
+                          "<li></li>" + "Wind: " + data.currently.windSpeed +
+                          "<li></li>" + "Pressure: " + data.currently.pressure
+                      )
+
+               console.log(data);
+               $('#tomorrow').append
+               (
+                   "<li></li>" + data.daily.data[1].temperatureLow + " / " + data.daily.data[1].temperatureHigh +
+                   "<li></li>" + data.daily.data[1].summary +
+                   "<li></li>" + "Humidity: " + data.daily.data[1].humidity +
+                   "<li></li>" + "Wind: " + data.daily.data[1].windSpeed +
+                   "<li></li>" + "Pressure: " + data.daily.data[1].pressure
+               )
+
+               console.log(data);
+               $('#next-day').append
+               (
+                   "<li></li>" + data.daily.data[2].temperatureLow + " / " + data.daily.data[2].temperatureHigh +
+                   "<li></li>" + data.daily.data[2].summary +
+                   "<li></li>" + "Humidity: " + data.daily.data[2].humidity +
+                   "<li></li>" + "Wind: " + data.daily.data[2].windSpeed +
+                   "<li></li>" + "Pressure: " + data.daily.data[2].pressure
+               )
+            })
+
+   })
+
+
+</script>
+
+</body>
+</html>
