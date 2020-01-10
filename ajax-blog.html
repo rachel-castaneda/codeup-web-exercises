@@ -10,12 +10,30 @@
 <body>
 
 <div id="posts"></div>
+<button id="refresh"><i class="fas fa-redo"></i></button>
 <script src="js/jquery-2.js"></script>
 <script>
-    $('document').ready(function () {
+    "use strict"
+    $(document).ready(function () {
+        function pageLoad() {
+            $.ajax('data/blog.json')
 
-        $.ajax('../data/blog.json')
+                .done(function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        console.log(data);
+                        $('#posts').append(
+                            "<h1></h1>" + data[i].title +
+                            "<p></p>" + data[i].content +
+                            "<p></p>" + data[i].categories +
+                            "<p></p>" + data[i].date
+                        )
 
+                    }
+
+                })
+        }
+        pageLoad()
+        $(#refresh)
     })
 </script>
 
