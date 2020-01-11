@@ -23,6 +23,9 @@
             display: flex;
             justify-content: center;
         }
+        /*#alerts {*/
+        /*    font-weight: bold;*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -95,6 +98,7 @@
                       (
                           "<li></li>" + data.daily.data[0].temperatureLow + "°" + " / " + data.daily.data[0].temperatureHigh + "°" +
                           "<li></li>" + data.daily.data[0].summary +
+                          "<li></li>" + data.alerts[0].title +
                           "<li></li>" + "Humidity: " + data.daily.data[0].humidity +
                           "<li></li>" + "Wind: " + data.daily.data[0].windSpeed +
                           "<li></li>" + "Chance of Rain: " + data.daily.data[0].precipProbability
@@ -105,6 +109,7 @@
                (
                    "<li></li>" + data.daily.data[1].temperatureLow + "°" + " / " + data.daily.data[1].temperatureHigh + "°" +
                    "<li></li>" + data.daily.data[1].summary +
+                   "<li></li>" + data.alerts[1].title +
                    "<li></li>" + "Humidity: " + data.daily.data[1].humidity +
                    "<li></li>" + "Wind: " + data.daily.data[1].windSpeed +
                    "<li></li>" + "Chance of Rain: " + data.daily.data[1].precipProbability
@@ -115,6 +120,7 @@
                (
                    "<li></li>" + data.daily.data[2].temperatureLow + "°" + " / " + data.daily.data[2].temperatureHigh + "°" +
                    "<li></li>" + data.daily.data[2].summary +
+                   "<li></li>" + data.alerts[2].title +
                    "<li></li>" + "Humidity: " + data.daily.data[2].humidity +
                    "<li></li>" + "Wind: " + data.daily.data[2].windSpeed +
                    "<li></li>" + "Chance of Rain: " + data.daily.data[2].precipProbability
@@ -164,43 +170,43 @@
         var iconArray = [
             {
                 "conditions": "clear-day",
-                "icon": "icons/climacons-master/SVG/Sun.svg"
+                "icon": "icons/sun.svg"
             },
             {
                 "conditions": "clear-night",
-                "icon": "icons/climacons-master/SVG/Moon.svg"
+                "icon": "icons/moon.svg"
             },
             {
                 "conditions": "rain",
-                "icon": "icons/climacons-master/SVG/Cloud-Rain.svg"
+                "icon": "icons/rain.svg"
             },
             {
                 "conditions": "snow",
-                "icon": "icons/climacons-master/SVG/Cloud-Snow-Alt.svg"
+                "icon": "icons/snow.svg"
             },
             {
                 "conditions": "sleet",
-                "icon": "icons/climacons-master/SVG/Snowflake.svg"
+                "icon": "icons/sleet.svg"
             },
             {
                 "conditions": "wind",
-                "icon": "icons/climacons-master/SVG/Wind.svg"
+                "icon": "icons/windy.svg"
             },
             {
                 "conditions": "fog",
-                "icon": "icons/climacons-master/SVG/Cloud-Fog.svg"
+                "icon": "icons/foggy.svg"
             },
             {
                 "conditions": "cloudy",
-                "icon": "icons/climacons-master/SVG/Cloud.svg"
+                "icon": "icons/cloudy.svg"
             },
             {
                 "conditions": "partly-cloudy-day",
-                "icon": "icons/climacons-master/SVG/Cloud-Sun.svg"
+                "icon": "icons/partly-cloudy-day.svg"
             },
             {
                 "conditions": "partly-cloudy-night",
-                "icon":"icons/climacons-master/SVG/Cloud-Moon.svg"
+                "icon":"icons/partly-cloudy-night.svg"
             }
         ]
 
