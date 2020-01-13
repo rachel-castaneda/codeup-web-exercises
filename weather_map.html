@@ -6,12 +6,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--    <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Changa|El+Messiri|Ruda&display=swap" rel="stylesheet">
+<!--    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />-->
     <style>
+        body {
+            background-color: #63C7B2;
+            /*background-color: #263D42;*/
+        }
         h1 {
             text-align: center;
             font-family: 'Changa', sans-serif;
             margin-top: 1em;
-
+            color: white;
         }
         h2 {
             font-family: 'Ruda', sans-serif;
@@ -22,6 +27,13 @@
         .row {
             display: flex;
             justify-content: center;
+        }
+        .weather-content {
+            /*background-color: #63C7B2;*/
+            background-color: #263D42;
+        }
+        .weather-main {
+            background-color: #80CED7;
         }
         /*#alerts {*/
         /*    font-weight: bold;*/
@@ -40,9 +52,9 @@
         <div class="card-deck"> <!--- container that aligns cards into a separated deck---->
 
 
-            <div class="card weather-main text-center" id="today" style="width: 18rem;"> <!---start of card 1 ---->
+            <div class="card weather-main border-dark text-center shadow p-3 mb-5 bg-white rounded" id="today" style="width: 18rem;"> <!---start of card 1 ---->
 
-                <img src="https://picsum.photos/200" id="today-img" class="card-img-top" alt="..."> <!---icon for card 1--->
+                <img src="icons/rolling.svg" id="today-img" class="card-img-top" alt="..."> <!---icon for card 1--->
 
                 <div class="card-body weather-content"> <!--content for weather forecast 1--->
                     <h2>Today's <br>Weather</h2>
@@ -51,9 +63,9 @@
             </div> <!-- end of first card --->
 
 
-            <div class="card weather-main text-center" id="tomorrow" style="width: 18rem;"> <!--- start of card 2 ---->
+            <div class="card weather-main border-dark text-center shadow p-3 mb-5 bg-white rounded" id="tomorrow" style="width: 18rem;"> <!--- start of card 2 ---->
 
-                <img src="https://picsum.photos/200" id="tomorrow-img" class="card-img-top" alt="..."> <!--- icon for card 2 ---->
+                <img src="icons/rolling.svg" id="tomorrow-img" class="card-img-top" alt="..."> <!--- icon for card 2 ---->
 
                 <div class="card-body weather-content"> <!--- content for weather forecast 2 ---->
                     <h2>Tomorrow's Weather</h2>
@@ -62,9 +74,9 @@
             </div> <!--- end second card ---->
 
 
-            <div class="card weather-main text-center" id="next-day" style="width: 18rem;"> <!---- start card 3 ---->
+            <div class="card weather-main border-dark text-center shadow p-3 mb-5 bg-white rounded" id="next-day" style="width: 18rem;"> <!---- start card 3 ---->
 
-                <img src="https://picsum.photos/200" id="next-day-img" class="card-img-top" alt="..."> <!--- icon for card 3 --->
+                <img src="icons/rolling.svg" id="next-day-img" class="card-img-top" alt="..."> <!--- icon for card 3 --->
 
                 <div class="card-body weather-content"> <!---- content for weather forecast 3 ---->
                     <h2>Next Day's Weather</h2>
@@ -80,6 +92,7 @@
 <!--Powered by Dark Sky &ndash;&gt; https://darksky.net/poweredby/-->
 <script src="js/keys.js"></script>
 <script src="js/jquery-2.js"></script>
+<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>-->
 <script>
 
     "use strict";
@@ -98,7 +111,6 @@
                       (
                           "<li></li>" + data.daily.data[0].temperatureLow + "°" + " / " + data.daily.data[0].temperatureHigh + "°" +
                           "<li></li>" + data.daily.data[0].summary +
-                          "<li></li>" + data.alerts[0].title +
                           "<li></li>" + "Humidity: " + data.daily.data[0].humidity +
                           "<li></li>" + "Wind: " + data.daily.data[0].windSpeed +
                           "<li></li>" + "Chance of Rain: " + data.daily.data[0].precipProbability
@@ -109,7 +121,6 @@
                (
                    "<li></li>" + data.daily.data[1].temperatureLow + "°" + " / " + data.daily.data[1].temperatureHigh + "°" +
                    "<li></li>" + data.daily.data[1].summary +
-                   "<li></li>" + data.alerts[1].title +
                    "<li></li>" + "Humidity: " + data.daily.data[1].humidity +
                    "<li></li>" + "Wind: " + data.daily.data[1].windSpeed +
                    "<li></li>" + "Chance of Rain: " + data.daily.data[1].precipProbability
@@ -120,7 +131,6 @@
                (
                    "<li></li>" + data.daily.data[2].temperatureLow + "°" + " / " + data.daily.data[2].temperatureHigh + "°" +
                    "<li></li>" + data.daily.data[2].summary +
-                   "<li></li>" + data.alerts[2].title +
                    "<li></li>" + "Humidity: " + data.daily.data[2].humidity +
                    "<li></li>" + "Wind: " + data.daily.data[2].windSpeed +
                    "<li></li>" + "Chance of Rain: " + data.daily.data[2].precipProbability
