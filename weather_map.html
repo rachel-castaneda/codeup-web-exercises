@@ -6,17 +6,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--    <link href="https://fonts.googleapis.com/css?family=Kumar+One&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css?family=Changa|El+Messiri|Ruda&display=swap" rel="stylesheet">
-<!--    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />-->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         body {
-            background-color: #63C7B2;
+            /*background-color: #63C7B2;*/
             /*background-color: #263D42;*/
+            box-sizing: border-box;
+            margin-left: 5em;
+            margin-right: 5em;
         }
         h1 {
             text-align: center;
             font-family: 'Changa', sans-serif;
             margin-top: 1em;
-            color: white;
+            color: black;
         }
         h2 {
             font-family: 'Ruda', sans-serif;
@@ -28,12 +31,35 @@
             display: flex;
             justify-content: center;
         }
-        .weather-content {
-            /*background-color: #63C7B2;*/
-            background-color: #263D42;
+        .card-text {
+            display: flex;
+            /*justify-content: center;*/
+            /*margin: auto;*/
+            /*align-content: center;*/
         }
+        #weather {
+           margin: 5em
+        }
+        .input-group {
+            width: 30%;
+        }
+        #nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*.weather-content {*/
+            /*background-color: #63C7B2;*/
+            /*background-color: #263D42;*/
+            /*color: white;*/
+        /*}*/
         .weather-main {
             background-color: #80CED7;
+        }
+        #map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
         }
         /*#alerts {*/
         /*    font-weight: bold;*/
@@ -44,42 +70,56 @@
 
 <!-- https://picsum.photos/200 -->
 
-<h1>Weather Map</h1> <!--- page header ---->
 
-    <div id="weather" class="row mt-5"> <!---- weather box cards start --->
+<div>  <!----container for nav bar ---->
+    <ul id="nav">
+        <h1>Weather Map</h1> <!--- page header ---->
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="enter location" aria-label="enter location" aria-describedby="basic-addon2">
+            <div class="input-group-append w-30">
+                <span class="input-group-text" id="basic-addon2">go</span>
+            </div>
+        </div>
+    </ul>
+
+
+</div> <!----end container for nav bar ----->
+
+    <div id="weather" class="row mt-5 m-0"> <!---- weather box cards start --->
 
 
         <div class="card-deck"> <!--- container that aligns cards into a separated deck---->
 
 
-            <div class="card weather-main border-dark text-center shadow p-3 mb-5 bg-white rounded" id="today" style="width: 18rem;"> <!---start of card 1 ---->
+            <div class="card weather-main border-dark text-center shadow mb-5 bg-white rounded " id="today" style="width: 18rem;"> <!---start of card 1 ---->
 
                 <img src="icons/rolling.svg" id="today-img" class="card-img-top" alt="..."> <!---icon for card 1--->
 
                 <div class="card-body weather-content"> <!--content for weather forecast 1--->
-                    <h2>Today's <br>Weather</h2>
-                    <ul class="card-text"></ul>
+                    <h2>today's <br> weather</h2>
+                    <ul class="card-text align-items-center"></ul>
                 </div> <!---- end weather content --->
             </div> <!-- end of first card --->
 
 
-            <div class="card weather-main border-dark text-center shadow p-3 mb-5 bg-white rounded" id="tomorrow" style="width: 18rem;"> <!--- start of card 2 ---->
+            <div class="card weather-main border-dark text-center shadow mb-5 bg-white rounded" id="tomorrow" style="width: 18rem;"> <!--- start of card 2 ---->
 
                 <img src="icons/rolling.svg" id="tomorrow-img" class="card-img-top" alt="..."> <!--- icon for card 2 ---->
 
                 <div class="card-body weather-content"> <!--- content for weather forecast 2 ---->
-                    <h2>Tomorrow's Weather</h2>
+                    <h2>tomorrow's weather</h2>
                     <ul class="card-text"></ul>
                 </div> <!--- end weather content --->
             </div> <!--- end second card ---->
 
 
-            <div class="card weather-main border-dark text-center shadow p-3 mb-5 bg-white rounded" id="next-day" style="width: 18rem;"> <!---- start card 3 ---->
+            <div class="card weather-main border-dark text-center shadow mb-5 bg-white rounded" id="next-day" style="width: 18rem;"> <!---- start card 3 ---->
 
                 <img src="icons/rolling.svg" id="next-day-img" class="card-img-top" alt="..."> <!--- icon for card 3 --->
 
                 <div class="card-body weather-content"> <!---- content for weather forecast 3 ---->
-                    <h2>Next Day's Weather</h2>
+                    <h2>next day's weather</h2>
                     <ul class="card-text"></ul>
                 </div> <!--- end weather content ---->
             </div> <!--- end card 3 ---->
@@ -88,11 +128,12 @@
         </div> <!--- end card deck ---->
 
     </div> <!--- weather box cards container end ---->
-
+    <div id="map"></div>
 <!--Powered by Dark Sky &ndash;&gt; https://darksky.net/poweredby/-->
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 <script src="js/keys.js"></script>
 <script src="js/jquery-2.js"></script>
-<!--<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>-->
+<script src="js/weather-map.js"></script>
 <script>
 
     "use strict";
@@ -119,6 +160,7 @@
                console.log(data); // day 2 weather content jquery start //
                $('#tomorrow').append
                (
+                   // "<li></li>" + "Tomorrow's Weather" +
                    "<li></li>" + data.daily.data[1].temperatureLow + "°" + " / " + data.daily.data[1].temperatureHigh + "°" +
                    "<li></li>" + data.daily.data[1].summary +
                    "<li></li>" + "Humidity: " + data.daily.data[1].humidity +
@@ -129,6 +171,7 @@
                console.log(data); // day 3 weather content jquery start //
                $('#next-day').append
                (
+                   // "<li></li>" + "Next day's Weather" +
                    "<li></li>" + data.daily.data[2].temperatureLow + "°" + " / " + data.daily.data[2].temperatureHigh + "°" +
                    "<li></li>" + data.daily.data[2].summary +
                    "<li></li>" + "Humidity: " + data.daily.data[2].humidity +
@@ -176,7 +219,7 @@
 
    }) // document ready function end //
 
-
+// array to loop through the icons //
         var iconArray = [
             {
                 "conditions": "clear-day",
@@ -219,6 +262,7 @@
                 "icon":"icons/partly-cloudy-night.svg"
             }
         ]
+
 
 
 

@@ -28,9 +28,9 @@ var markerOptions = {
     rotation: 70,
     // anchor: "top",
 }
-// var marker = new mapboxgl.Marker(markerOptions)
-//     .setLngLat([-98.5981, 29.4893])
-//     .addTo(map);
+var marker = new mapboxgl.Marker(markerOptions)
+    .setLngLat([-98.5981, 29.4893])
+    .addTo(map);
 var restaurants = [
     {
         name: "Piccolo's Italiano Restaurant",
