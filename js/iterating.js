@@ -1,5 +1,5 @@
-(function(){
-    "use strict";
+// (function(){
+//     "use strict";
 
     /**
      * TODO:
@@ -74,4 +74,5 @@
     }
     console.log(last(numbers))
 
-})();
+// })();
+//
